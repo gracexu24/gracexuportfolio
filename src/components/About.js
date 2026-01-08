@@ -79,13 +79,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: 12,
   },
   skillTag: {
     backgroundColor: '#f0f0f0',
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 20,
+    marginRight: 12,
+    marginBottom: 12,
   },
   skillText: {
     fontSize: 14,

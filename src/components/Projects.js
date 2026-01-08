@@ -1,50 +1,44 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { projects } from '../data/projects';
 
-const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration and admin dashboard.',
-      tech: ['React', 'Node.js', 'MongoDB'],
-    },
-    {
-      id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates.',
-      tech: ['React Native', 'Firebase'],
-    },
-    {
-      id: 3,
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather dashboard with location-based forecasts.',
-      tech: ['React', 'API Integration'],
-    },
+const Projects = ({ onProjectSelect }) => {
+  const categories = [
+    { key: 'software', title: 'Software' },
+    { key: 'robotics', title: 'Robotics' },
+    { key: 'webApp', title: 'Web/App Dev' },
   ];
 
   return (
     <View style={styles.container} id="projects">
       <View style={styles.content}>
         <Text style={styles.title}>My Projects</Text>
-        <View style={styles.projectsGrid}>
-          {projects.map((project) => (
-            <View key={project.id} style={styles.projectCard}>
-              <Text style={styles.projectTitle}>{project.title}</Text>
-              <Text style={styles.projectDescription}>{project.description}</Text>
-              <View style={styles.techTags}>
-                {project.tech.map((tech, index) => (
-                  <View key={index} style={styles.techTag}>
-                    <Text style={styles.techText}>{tech}</Text>
+        {categories.map((category) => (
+          <View key={category.key} style={styles.categorySection}>
+            <Text style={styles.categoryTitle}>{category.title}</Text>
+            <View style={styles.projectsGrid}>
+              {projects[category.key].map((project) => (
+                <View key={project.id} style={[styles.projectCard, styles.projectCardSpacing]}>
+                  <Text style={styles.projectTitle}>{project.title}</Text>
+                  <Text style={styles.projectDescription}>{project.description}</Text>
+                  <View style={styles.techTags}>
+                    {project.tech.map((tech, index) => (
+                      <View key={index} style={styles.techTag}>
+                        <Text style={styles.techText}>{tech}</Text>
+                      </View>
+                    ))}
                   </View>
-                ))}
-              </View>
-              <TouchableOpacity style={styles.projectButton}>
-                <Text style={styles.projectButtonText}>View Project</Text>
-              </TouchableOpacity>
+                  <TouchableOpacity 
+                    style={styles.projectButton}
+                    onPress={() => onProjectSelect(project)}
+                  >
+                    <Text style={styles.projectButtonText}>View Project</Text>
+                  </TouchableOpacity>
+                </View>
+              ))}
             </View>
-          ))}
-        </View>
+          </View>
+        ))}
       </View>
     </View>
   );
@@ -68,11 +62,26 @@ const styles = StyleSheet.create({
     marginBottom: 48,
     textAlign: 'center',
   },
+  categorySection: {
+    marginBottom: 60,
+  },
+  categoryTitle: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#1a1a1a',
+    marginBottom: 24,
+    paddingBottom: 12,
+    borderBottomWidth: 2,
+    borderBottomColor: '#0d2842',
+  },
   projectsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: 24,
+  },
+  projectCardSpacing: {
+    marginRight: 24,
+    marginBottom: 24,
   },
   projectCard: {
     backgroundColor: '#ffffff',
@@ -101,7 +110,6 @@ const styles = StyleSheet.create({
   techTags: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 8,
     marginBottom: 20,
   },
   techTag: {
@@ -109,6 +117,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 12,
+    marginRight: 8,
+    marginBottom: 8,
   },
   techText: {
     fontSize: 12,
@@ -116,7 +126,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   projectButton: {
-    backgroundColor: '#4a90e2',
+    backgroundColor: '#0d2842',
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',
@@ -129,4 +139,3 @@ const styles = StyleSheet.create({
 });
 
 export default Projects;
-

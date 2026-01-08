@@ -3,9 +3,11 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const Header = () => {
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (typeof document !== 'undefined') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -17,10 +19,10 @@ const Header = () => {
           <TouchableOpacity onPress={() => scrollToSection('about')}>
             <Text style={styles.navLink}>About</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => scrollToSection('projects')}>
+          <TouchableOpacity style={styles.navLinkContainer} onPress={() => scrollToSection('projects')}>
             <Text style={styles.navLink}>Projects</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => scrollToSection('contact')}>
+          <TouchableOpacity style={styles.navLinkContainer} onPress={() => scrollToSection('contact')}>
             <Text style={styles.navLink}>Contact</Text>
           </TouchableOpacity>
         </View>
@@ -28,12 +30,6 @@ const Header = () => {
       <View style={styles.hero}>
         <Text style={styles.heroTitle}>Hello, I'm Grace Xu</Text>
         <Text style={styles.heroSubtitle}>Full Stack Developer & Creative Problem Solver</Text>
-        <TouchableOpacity 
-          style={styles.ctaButton}
-          onPress={() => scrollToSection('projects')}
-        >
-          <Text style={styles.ctaButtonText}>View My Work</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -41,7 +37,7 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: '#1a1a1a',
+    backgroundColor: '#0a1929',
     paddingTop: 20,
     paddingBottom: 80,
   },
@@ -59,7 +55,9 @@ const styles = StyleSheet.create({
   },
   navLinks: {
     flexDirection: 'row',
-    gap: 30,
+  },
+  navLinkContainer: {
+    marginLeft: 30,
   },
   navLink: {
     fontSize: 16,
@@ -81,19 +79,7 @@ const styles = StyleSheet.create({
   heroSubtitle: {
     fontSize: 20,
     color: '#b0b0b0',
-    marginBottom: 32,
     textAlign: 'center',
-  },
-  ctaButton: {
-    backgroundColor: '#4a90e2',
-    paddingHorizontal: 32,
-    paddingVertical: 14,
-    borderRadius: 8,
-  },
-  ctaButtonText: {
-    color: '#ffffff',
-    fontSize: 16,
-    fontWeight: '600',
   },
 });
 
