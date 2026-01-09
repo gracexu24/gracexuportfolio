@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   backButton: {
     marginBottom: 24,
     alignSelf: 'flex-start',
-    backgroundColor: '#0d2842',
+    backgroundColor: '#5A9BC4',
     paddingHorizontal: 20,
     paddingVertical: 12,
     borderRadius: 8,

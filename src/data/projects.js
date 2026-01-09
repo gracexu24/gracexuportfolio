@@ -2,120 +2,177 @@ export const projects = {
   software: [
     {
       id: 'software-1',
-      title: 'Distributed Systems Framework',
-      description: 'A high-performance distributed computing framework with load balancing and fault tolerance.',
-      tech: ['Python', 'Docker', 'Kubernetes', 'Redis'],
+      title: 'Trash Detection Model',
+      description: 'Trained a YOLO-based object detection model on a Kaggle waste dataset to classify and count trash items in real time.',
+      tech: ['Python', 'OpenCV', 'YOLO', 'NumPy', 'Kaggle', 'PyTorch', 'Supervision', 'FastAPI'],
       category: 'software',
-      image: 'https://via.placeholder.com/600x400/4a90e2/ffffff?text=Distributed+Systems',
-      goal: 'Create a scalable distributed systems framework that can handle millions of concurrent requests with minimal latency.',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Trash+Detection+Model',
+      goal: 'Develop a real-time object detection system that can identify and classify different types of trash items from camera feeds, enabling automated waste management and recycling.',
       challenges: [
-        'Implementing efficient load balancing algorithms',
-        'Ensuring data consistency across distributed nodes',
-        'Handling network partitions and node failures',
-        'Optimizing memory usage for large-scale deployments'
+        'Training a YOLO model on a diverse waste dataset with varying lighting and object conditions',
+        'Optimizing model performance for real-time inference on edge devices',
+        'Deploying the model as a FastAPI service for streaming video processing',
+        'Integrating with AR headset cameras for live detection and visual feedback'
       ],
-      solution: 'Developed a custom consensus algorithm using Raft protocol, implemented intelligent load balancing with consistent hashing, and created a robust failure detection and recovery system. Used Redis for distributed caching and Kubernetes for container orchestration.'
+      solution: 'Trained a YOLO-based object detection model using PyTorch on a comprehensive Kaggle waste dataset. Implemented preprocessing pipelines with OpenCV and NumPy for image augmentation and normalization. Deployed the model as a FastAPI service that can process video streams in real-time, enabling integration with AR headset cameras for live detection and visual feedback. Used Supervision library for post-processing and visualization of detection results.'
     },
     {
       id: 'software-2',
-      title: 'Machine Learning Pipeline',
-      description: 'An end-to-end ML pipeline for automated model training and deployment.',
-      tech: ['Python', 'TensorFlow', 'MLflow', 'AWS'],
+      title: 'Autonomous Driving Research - Columbia Engineering',
+      description: 'Implemented and tested PID control python scripts on a Raspberry Pi and AWS Deepracer, integrating IMU feedback with Kalman filtering for state estimation and localization.',
+      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer', 'PID Control', 'Kalman Filter', 'IMU'],
       category: 'software',
-      image: 'https://via.placeholder.com/600x400/4a90e2/ffffff?text=ML+Pipeline',
-      goal: 'Build an automated machine learning pipeline that can train, evaluate, and deploy models with minimal human intervention.',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Autonomous+Driving+Research',
+      goal: 'Develop and test autonomous driving algorithms using PID control and sensor fusion techniques to regulate vehicle speed and trajectory in urban environments.',
       challenges: [
-        'Managing large datasets efficiently',
-        'Automating hyperparameter tuning',
-        'Version controlling models and experiments',
-        'Deploying models to production with zero downtime'
+        'Integrating IMU feedback with Kalman filtering for accurate state estimation',
+        'Implementing PID control algorithms for precise speed and trajectory regulation',
+        'Testing algorithms on scaled-down models of urban intersections',
+        'Optimizing control parameters for different driving scenarios'
       ],
-      solution: 'Created a modular pipeline using TensorFlow for model development, MLflow for experiment tracking, and implemented automated hyperparameter optimization using Bayesian methods. Built CI/CD pipelines for seamless model deployment.'
+      solution: 'Implemented PID control scripts in Python for both Raspberry Pi and AWS Deepracer platforms. Integrated IMU sensor feedback with Kalman filtering algorithms to achieve accurate state estimation and localization. Developed comprehensive testing procedures using scaled-down models of urban intersections to evaluate algorithm performance. Created data logging and visualization tools to analyze control system behavior and optimize PID parameters for different driving conditions.'
+    },
+    {
+      id: 'software-3',
+      title: 'NASA Spacesuit User Interface Technologies',
+      description: 'Lead 30+ college students in collaborative coding development to engineer software tools (object detection, telemetry display, navigation algorithms, AI assistant) and design an intuitive AR interface for astronaut spacesuits with Magic Leap headset.',
+      tech: ['Unity C#', 'Magic Leap', 'Object Detection', 'AR Development', 'Jira', 'GitHub'],
+      category: 'software',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=NASA+Spacesuit+UI',
+      goal: 'Develop comprehensive software tools and an intuitive AR interface for astronaut spacesuits that enhance mission capabilities and astronaut safety during space operations.',
+      challenges: [
+        'Leading a team of 30+ students with varying skill levels and coordinating their contributions',
+        'Engineering multiple software components: object detection, telemetry display, navigation algorithms, and AI assistant',
+        'Designing an intuitive AR interface for use in space environments with Magic Leap headset',
+        'Coordinating with club leadership, administration, faculty, and NASA advisors to secure funding and meet deadlines',
+        'Managing Agile development sprints and tracking progress across multiple workstreams',
+        'Creating accessible technical documentation to onboard new team members',
+        'Ensuring implementation feasibility according to NASA project specifications'
+      ],
+      solution: 'As Project Lead, delegated technical proposal writing tasks and brainstormed software solutions that aligned with NASA specifications, resulting in top 10 NASA selected proposals. Coordinated with multiple stakeholders including club leadership, administration, faculty, and NASA advisors to secure funding and meet critical deadlines. Defined project milestones and timeline, managing Agile development sprints and tracking progress with Jira and GitHub. Doubled team size by creating comprehensive technical documentation that made the project accessible to more students, fostering an inclusive environment. Successfully tested and presented the final project at NASA Johnson Space Center, culminating in a final paper documenting findings and development process. The project delivered object detection capabilities, telemetry display systems, navigation algorithms, and an AI assistant, all integrated into an intuitive AR interface using Unity C# and Magic Leap technology.'
     }
   ],
   robotics: [
     {
       id: 'robotics-1',
-      title: 'Autonomous Navigation System',
-      description: 'A ROS-based autonomous navigation system for mobile robots with SLAM capabilities.',
-      tech: ['ROS', 'C++', 'Python', 'OpenCV', 'LiDAR'],
+      title: 'Autonomous Driving Claw Robot',
+      description: 'Designed, prototyped, and built a driving robotic claw that picked up and stored objects using motors, cameras, servos, laser cut elements, ultrasonic distance sensors, and speakers.',
+      tech: ['PCB Design', 'Python', 'NumPy', 'CV2', 'GPIO', 'CAD', 'Raspberry Pi'],
       category: 'robotics',
-      image: 'https://via.placeholder.com/600x400/4a90e2/ffffff?text=Autonomous+Robot',
-      goal: 'Develop an autonomous navigation system that allows robots to map unknown environments and navigate safely to target locations.',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Autonomous+Claw+Robot',
+      goal: 'Create an autonomous robotic system that can navigate, detect objects using computer vision, and manipulate objects with a claw mechanism, all while operating independently.',
       challenges: [
-        'Real-time SLAM processing with limited computational resources',
-        'Handling dynamic obstacles and changing environments',
-        'Ensuring safety in human-robot interactions',
-        'Optimizing path planning algorithms for efficiency'
+        'Integrating multiple hardware components (motors, cameras, servos, sensors) into a cohesive system',
+        'Implementing real-time computer vision for object detection and tracking',
+        'Designing and fabricating custom PCB for component connectivity',
+        'Developing PID control algorithms for precise autonomous movement',
+        'Creating a robust mechanical design with laser-cut elements'
       ],
-      solution: 'Implemented a hybrid SLAM approach combining LiDAR and visual odometry, developed a dynamic obstacle avoidance system using predictive algorithms, and created a safety layer with emergency stop capabilities. Used A* algorithm with dynamic replanning for efficient path finding.'
-    },
-    {
-      id: 'robotics-2',
-      title: 'Robotic Arm Control System',
-      description: 'Precision control system for a 6-DOF robotic arm with computer vision integration.',
-      tech: ['C++', 'OpenCV', 'Arduino', 'Python', 'ROS'],
-      category: 'robotics',
-      image: 'https://via.placeholder.com/600x400/4a90e2/ffffff?text=Robotic+Arm',
-      goal: 'Create a precise control system for a robotic arm that can perform complex manipulation tasks with visual feedback.',
-      challenges: [
-        'Achieving sub-millimeter precision in positioning',
-        'Real-time computer vision processing',
-        'Handling inverse kinematics calculations',
-        'Compensating for mechanical backlash and vibrations'
-      ],
-      solution: 'Developed a PID control system with feedforward compensation, implemented real-time object detection using OpenCV, and created a robust inverse kinematics solver. Added Kalman filtering to reduce sensor noise and improve positioning accuracy.'
+      solution: 'Designed and prototyped a complete robotic system from scratch, including custom PCB design for component integration. Implemented computer vision algorithms using CV2 and NumPy for real-time object detection and tracking. Coded the robot\'s autonomous movement using PID control algorithms with GPIO control on Raspberry Pi. Integrated ultrasonic distance sensors for obstacle avoidance and navigation. Built a mechanical claw system with servo control for object manipulation. Created CAD designs and laser-cut custom elements for the robot chassis and components.'
     }
   ],
   webApp: [
     {
       id: 'web-1',
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with payment integration and admin dashboard.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Express'],
+      title: 'Cafe List Website',
+      description: 'Built a full stack website for coffee shop lovers that allows users to sign in, view and like nearby cafes and interact with other users\' cafe preferences.',
+      tech: ['Google Maps API', 'MySQL', 'Node.js', 'React', 'Express', 'Railway', 'Render', 'GitHub Pages'],
       category: 'webApp',
-      image: 'https://via.placeholder.com/600x400/4a90e2/ffffff?text=E-Commerce',
-      goal: 'Build a scalable e-commerce platform that can handle thousands of concurrent users with secure payment processing and comprehensive admin tools.',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Cafe+List+Website',
+      goal: 'Create a social platform where coffee enthusiasts can discover, save, and share their favorite cafes with a community of like-minded users.',
       challenges: [
-        'Implementing secure payment processing',
-        'Handling high traffic loads',
-        'Managing inventory in real-time',
-        'Creating an intuitive user experience'
+        'Designing a scalable MySQL database schema for users, cafes, and interactions',
+        'Implementing Google Maps API for location-based services and map visualization',
+        'Building a full-stack application with separate frontend and backend deployments',
+        'Creating a dynamic and shareable user experience with real-time interactions',
+        'Hosting frontend, backend, and database across multiple platforms (Railway, Render, GitHub Pages)'
       ],
-      solution: 'Developed a microservices architecture with React frontend, Node.js/Express backend, and MongoDB for data storage. Integrated Stripe for secure payments, implemented Redis caching for performance, and created a comprehensive admin dashboard for inventory and order management.'
+      solution: 'Developed a full-stack web application with React frontend and Node.js/Express backend. Designed and implemented a comprehensive MySQL database schema to store user accounts, cafe information, likes, and user preferences. Integrated Google Maps API to display cafe locations, enable location-based searches, and provide interactive map features. Implemented user authentication and authorization for secure sign-in functionality. Deployed the frontend on GitHub Pages, backend on Railway, and database on Render, ensuring proper CORS configuration and API connectivity across platforms. Created an intuitive UI that allows users to discover cafes, like their favorites, and see what other users are enjoying.'
     },
     {
       id: 'web-2',
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates.',
-      tech: ['React Native', 'Firebase', 'TypeScript', 'Redux'],
+      title: 'LookBook App - DevFest 2025 Hackathon',
+      description: 'Developed backend features including photo upload/posting and account management for a fashion social media platform.',
+      tech: ['MySQL', 'Node.js', 'XCode', 'Render', 'Railway'],
       category: 'webApp',
-      image: 'https://via.placeholder.com/600x400/4a90e2/ffffff?text=Task+App',
-      goal: 'Create a cross-platform task management app that enables teams to collaborate in real-time with seamless synchronization across devices.',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=LookBook+App',
+      goal: 'Build a fashion social media platform that allows users to share outfit photos and manage their fashion profiles, developed under hackathon time constraints.',
       challenges: [
-        'Real-time synchronization across multiple devices',
-        'Offline functionality and data persistence',
-        'Managing complex state in a mobile app',
-        'Ensuring data consistency in collaborative editing'
+        'Developing robust backend APIs for photo upload and storage under time pressure',
+        'Implementing secure account management and user authentication',
+        'Collaborating effectively in a team of 4 with clear communication and task delegation',
+        'Managing time effectively to deliver a working product within hackathon deadlines',
+        'Integrating backend services with mobile app development in XCode'
       ],
-      solution: 'Built a React Native app with Firebase for real-time database and authentication. Implemented Redux for state management, added offline support with local storage, and used Firebase Cloud Functions for server-side logic. Created conflict resolution algorithms for collaborative editing.'
+      solution: 'Collaborated in a team of 4 to develop the backend infrastructure for a fashion social media platform. Built RESTful APIs using Node.js and Express for photo upload, posting, and account management. Designed MySQL database schema for users, posts, and social interactions. Implemented secure authentication and authorization systems. Deployed backend services on Railway and Render for reliability. Worked closely with frontend developers using XCode to ensure seamless API integration. Enhanced team communication, problem-solving, and time management skills while delivering a functional product within hackathon constraints.'
     },
     {
       id: 'web-3',
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather dashboard with location-based forecasts.',
-      tech: ['React', 'API Integration', 'Chart.js', 'Geolocation API'],
+      title: 'Sachi Health Startup - Full Stack App',
+      description: 'Building MVP of a women\'s health app, from Figma designs to a deployed Apple Testflight app, with React Native and Expo tools.',
+      tech: ['React Native', 'Expo', 'SQLite', 'AWS RDS', 'Apple HealthKit', 'Figma'],
       category: 'webApp',
-      image: 'https://via.placeholder.com/600x400/4a90e2/ffffff?text=Weather+Dashboard',
-      goal: 'Develop an intuitive weather dashboard that provides accurate forecasts with beautiful visualizations and location-based services.',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Sachi+Health+App',
+      goal: 'Develop a comprehensive women\'s health mobile application that integrates with wearables and health data to provide personalized health insights and medication management.',
       challenges: [
-        'Integrating multiple weather APIs',
-        'Handling geolocation permissions',
-        'Creating responsive and accessible UI',
-        'Optimizing API calls and caching data'
+        'Translating Figma designs into a fully functional React Native application',
+        'Implementing Apple HealthKit data pipelines for seamless health data integration',
+        'Developing medication scheduling with notifications and reminders',
+        'Building data storage solutions using both SQLite (local) and AWS RDS (cloud)',
+        'Creating data visualization for health metrics and wearables data',
+        'Collaborating effectively with a startup team of 5 in an agile environment'
       ],
-      solution: 'Created a React app that integrates with multiple weather APIs for redundancy. Implemented geolocation with fallback options, used Chart.js for data visualization, and added service workers for offline functionality. Implemented intelligent caching to minimize API calls.'
+      solution: 'Owned the development of key features including the medication scheduling page, app notifications and settings, and Apple HealthKit data pipelines. Implemented dual storage architecture using SQLite for local data persistence and AWS Relational Database for cloud synchronization. Built comprehensive data visualization components to display user health metrics and wearables data. Created feature and library documentation to facilitate successful collaboration with the startup team. Presented progress at weekly standups and contributed to the overall product strategy. Successfully deployed the MVP to Apple Testflight for beta testing.'
+    },
+    {
+      id: 'web-4',
+      title: 'DivHacks Hackathon Website',
+      description: 'Directed team of web developers to launch DivHack\'s hackathon website, coordinating across outreach and design teams.',
+      tech: ['React', 'HTML', 'CSS', 'GitHub', 'Vercel'],
+      category: 'webApp',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=DivHacks+Website',
+      goal: 'Migrate and modernize the DivHacks hackathon website to improve usability, accessibility, and functionality for 300+ hackers and sponsors.',
+      challenges: [
+        'Migrating legacy HTML/CSS site to modern React architecture',
+        'Coordinating across multiple teams (web development, outreach, design)',
+        'Implementing branch-based workflows in GitHub for collaborative development',
+        'Configuring deployments with Vercel for seamless CI/CD',
+        'Building mobile-responsive layouts and live-updating features',
+        'Creating accessible features for diverse user needs'
+      ],
+      solution: 'Led a team of web developers by defining clear objectives, delegating tasks, and driving weekly check-ins to ensure timely delivery. Successfully migrated the legacy HTML/CSS site to React, improving code maintainability and performance. Implemented branch-based workflows in GitHub to enable parallel development and code review processes. Configured automated deployments with Vercel for continuous integration. Built intuitive features including mobile-responsive layouts, live-updating schedules, and a beginner resources page. Improved site usability and accessibility, resulting in a better experience for 300+ hackers and sponsors during the MLH 2026 season launch.'
+    },
+    {
+      id: 'web-5',
+      title: 'Studio April Showers Website',
+      description: 'Personal portfolio and showcase website for creative work.',
+      tech: ['Web Development'],
+      category: 'webApp',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Studio+April+Showers',
+      goal: 'Create a professional website to showcase creative work and portfolio pieces.',
+      challenges: [
+        'Designing an intuitive and visually appealing user interface',
+        'Ensuring fast load times and optimal performance',
+        'Creating a responsive design that works across all devices'
+      ],
+      solution: 'Developed a clean and modern website to showcase creative work. Focused on user experience with intuitive navigation and fast loading times. Implemented responsive design principles to ensure optimal viewing across desktop, tablet, and mobile devices. The site is live at studioaprilshowers.com.'
+    },
+    {
+      id: 'web-6',
+      title: 'Pinball Game',
+      description: 'An interactive pinball game built with modern web technologies featuring realistic physics, scoring system, and engaging gameplay mechanics.',
+      tech: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Physics Engine'],
+      category: 'webApp',
+      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Pinball+Game',
+      goal: 'Create an engaging and interactive pinball game that provides an authentic arcade experience with smooth physics, responsive controls, and entertaining gameplay.',
+      challenges: [
+        'Implementing realistic ball physics and collision detection',
+        'Creating responsive controls that feel natural and intuitive',
+        'Designing an engaging game layout with multiple bumpers and targets',
+        'Building a scoring system that rewards skillful play',
+        'Optimizing performance for smooth 60fps gameplay'
+      ],
+      solution: 'Developed a fully interactive pinball game using HTML5 Canvas for rendering and JavaScript for game logic. Implemented a custom physics engine to handle ball movement, collisions with bumpers, flippers, and walls. Created responsive flipper controls using keyboard and mouse inputs. Designed an engaging game layout with multiple scoring targets, bumpers, and special features. Built a comprehensive scoring system that tracks points, multipliers, and bonus rounds. Optimized rendering and physics calculations to maintain smooth 60fps gameplay across different devices.'
     }
   ]
 };
-

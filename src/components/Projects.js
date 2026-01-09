@@ -3,42 +3,38 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { projects } from '../data/projects';
 
 const Projects = ({ onProjectSelect }) => {
-  const categories = [
-    { key: 'software', title: 'Software' },
-    { key: 'robotics', title: 'Robotics' },
-    { key: 'webApp', title: 'Web/App Dev' },
+  // Flatten all projects from all categories into a single array
+  const allProjects = [
+    ...projects.software,
+    ...projects.robotics,
+    ...projects.webApp,
   ];
 
   return (
     <View style={styles.container} id="projects">
       <View style={styles.content}>
         <Text style={styles.title}>My Projects</Text>
-        {categories.map((category) => (
-          <View key={category.key} style={styles.categorySection}>
-            <Text style={styles.categoryTitle}>{category.title}</Text>
-            <View style={styles.projectsGrid}>
-              {projects[category.key].map((project) => (
-                <View key={project.id} style={[styles.projectCard, styles.projectCardSpacing]}>
-                  <Text style={styles.projectTitle}>{project.title}</Text>
-                  <Text style={styles.projectDescription}>{project.description}</Text>
-                  <View style={styles.techTags}>
-                    {project.tech.map((tech, index) => (
-                      <View key={index} style={styles.techTag}>
-                        <Text style={styles.techText}>{tech}</Text>
-                      </View>
-                    ))}
+        <View style={styles.projectsGrid}>
+          {allProjects.map((project) => (
+            <View key={project.id} style={[styles.projectCard, styles.projectCardSpacing]}>
+              <Text style={styles.projectTitle}>{project.title}</Text>
+              <Text style={styles.projectDescription}>{project.description}</Text>
+              <View style={styles.techTags}>
+                {project.tech.map((tech, index) => (
+                  <View key={index} style={styles.techTag}>
+                    <Text style={styles.techText}>{tech}</Text>
                   </View>
-                  <TouchableOpacity 
-                    style={styles.projectButton}
-                    onPress={() => onProjectSelect(project)}
-                  >
-                    <Text style={styles.projectButtonText}>View Project</Text>
-                  </TouchableOpacity>
-                </View>
-              ))}
+                ))}
+              </View>
+              <TouchableOpacity 
+                style={styles.projectButton}
+                onPress={() => onProjectSelect(project)}
+              >
+                <Text style={styles.projectButtonText}>View Project</Text>
+              </TouchableOpacity>
             </View>
-          </View>
-        ))}
+          ))}
+        </View>
       </View>
     </View>
   );
@@ -61,18 +57,6 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
     marginBottom: 48,
     textAlign: 'center',
-  },
-  categorySection: {
-    marginBottom: 60,
-  },
-  categoryTitle: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#1a1a1a',
-    marginBottom: 24,
-    paddingBottom: 12,
-    borderBottomWidth: 2,
-    borderBottomColor: '#0d2842',
   },
   projectsGrid: {
     flexDirection: 'row',
@@ -126,7 +110,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   projectButton: {
-    backgroundColor: '#0d2842',
+    backgroundColor: '#5A9BC4',
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: 'center',

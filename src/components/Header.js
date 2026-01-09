@@ -29,7 +29,12 @@ const Header = () => {
       </View>
       <View style={styles.hero}>
         <Text style={styles.heroTitle}>Hello, I'm Grace Xu</Text>
-        <Text style={styles.heroSubtitle}>Full Stack Developer & Creative Problem Solver</Text>
+        <Text style={styles.heroDescription}>
+          I'm a passionate developer with a love for creating beautiful and functional applications.
+          With expertise in modern web technologies, I bring ideas to life through clean code and
+          thoughtful design. I enjoy solving complex problems and continuously learning new
+          technologies to stay at the forefront of development.
+        </Text>
       </View>
     </View>
   );
@@ -37,7 +42,7 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: '#0a1929',
+    backgroundColor: '#75B2DD',
     paddingTop: 20,
     paddingBottom: 80,
   },
@@ -73,13 +78,16 @@ const styles = StyleSheet.create({
     fontSize: 48,
     fontWeight: 'bold',
     color: '#ffffff',
-    marginBottom: 16,
     textAlign: 'center',
+    marginBottom: 24,
   },
-  heroSubtitle: {
-    fontSize: 20,
-    color: '#b0b0b0',
+  heroDescription: {
+    fontSize: 18,
+    lineHeight: 28,
+    color: '#ffffff',
     textAlign: 'center',
+    maxWidth: 800,
+    paddingHorizontal: 20,
   },
 });
 

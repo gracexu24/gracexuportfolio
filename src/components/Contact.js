@@ -3,23 +3,20 @@ import { View, Text, StyleSheet, TouchableOpacity, Linking } from 'react-native'
 
 const Contact = () => {
   const handleEmailPress = () => {
-    Linking.openURL('mailto:your.email@example.com');
+    Linking.openURL('mailto:gx2168@columbia.edu');
   };
 
   const handleLinkedInPress = () => {
-    Linking.openURL('https://linkedin.com/in/yourprofile');
+    Linking.openURL('https://www.linkedin.com/in/grace-xu28/');
   };
 
   return (
     <View style={styles.container} id="contact">
       <View style={styles.content}>
-        <Text style={styles.title}>Get In Touch</Text>
-        <Text style={styles.subtitle}>
-          I'm always open to discussing new projects, creative ideas, or opportunities.
-        </Text>
+        <Text style={styles.contactInfo}>Contact Info</Text>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.contactButton} onPress={handleEmailPress}>
-            <Text style={styles.contactButtonText}>Email Me</Text>
+            <Text style={styles.contactButtonText}>Email</Text>
           </TouchableOpacity>
           <TouchableOpacity style={[styles.contactButton, styles.contactButtonSpacing]} onPress={handleLinkedInPress}>
             <Text style={styles.contactButtonText}>LinkedIn</Text>
@@ -32,7 +29,7 @@ const Contact = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#0a1929',
+    backgroundColor: '#75B2DD',
     paddingVertical: 80,
     paddingHorizontal: 30,
   },
@@ -41,16 +38,10 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: '100%',
   },
-  title: {
+  contactInfo: {
     fontSize: 36,
     fontWeight: 'bold',
     color: '#ffffff',
-    marginBottom: 16,
-    textAlign: 'center',
-  },
-  subtitle: {
-    fontSize: 18,
-    color: '#b0b0b0',
     marginBottom: 40,
     textAlign: 'center',
   },
@@ -60,7 +51,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   contactButton: {
-    backgroundColor: '#0d2842',
+    backgroundColor: '#5A9BC4',
     paddingHorizontal: 40,
     paddingVertical: 16,
     borderRadius: 8,
