@@ -43,6 +43,14 @@ module.exports = {
           noErrorOnMissing: true,
           toType: 'file'
         },
+        {
+          from: 'public',
+          to: '',
+          globOptions: {
+            ignore: ['**/index.html', '**/CNAME'],
+          },
+          noErrorOnMissing: true,
+        },
       ],
     }),
   ],

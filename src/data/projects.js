@@ -1,37 +1,22 @@
 export const projects = {
   software: [
-    {
-      id: 'software-1',
-      title: 'Trash Detection Model',
-      description: 'Trained a YOLO-based object detection model on a Kaggle waste dataset to classify and count trash items in real time.',
-      tech: ['Python', 'OpenCV', 'YOLO', 'NumPy', 'Kaggle', 'PyTorch', 'Supervision', 'FastAPI'],
-      category: 'software',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Trash+Detection+Model',
-      goal: 'Develop a real-time object detection system that can identify and classify different types of trash items from camera feeds, enabling automated waste management and recycling.',
-      challenges: [
-        'Training a YOLO model on a diverse waste dataset with varying lighting and object conditions',
-        'Optimizing model performance for real-time inference on edge devices',
-        'Deploying the model as a FastAPI service for streaming video processing',
-        'Integrating with AR headset cameras for live detection and visual feedback'
-      ],
-      solution: 'Trained a YOLO-based object detection model using PyTorch on a comprehensive Kaggle waste dataset. Implemented preprocessing pipelines with OpenCV and NumPy for image augmentation and normalization. Deployed the model as a FastAPI service that can process video streams in real-time, enabling integration with AR headset cameras for live detection and visual feedback. Used Supervision library for post-processing and visualization of detection results.'
-    },
-    {
-      id: 'software-2',
-      title: 'Autonomous Driving Research - Columbia Engineering',
-      description: 'Implemented and tested PID control python scripts on a Raspberry Pi and AWS Deepracer, integrating IMU feedback with Kalman filtering for state estimation and localization.',
-      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer', 'PID Control', 'Kalman Filter', 'IMU'],
-      category: 'software',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Autonomous+Driving+Research',
-      goal: 'Develop and test autonomous driving algorithms using PID control and sensor fusion techniques to regulate vehicle speed and trajectory in urban environments.',
-      challenges: [
-        'Integrating IMU feedback with Kalman filtering for accurate state estimation',
-        'Implementing PID control algorithms for precise speed and trajectory regulation',
-        'Testing algorithms on scaled-down models of urban intersections',
-        'Optimizing control parameters for different driving scenarios'
-      ],
-      solution: 'Implemented PID control scripts in Python for both Raspberry Pi and AWS Deepracer platforms. Integrated IMU sensor feedback with Kalman filtering algorithms to achieve accurate state estimation and localization. Developed comprehensive testing procedures using scaled-down models of urban intersections to evaluate algorithm performance. Created data logging and visualization tools to analyze control system behavior and optimize PID parameters for different driving conditions.'
-    },
+    // Trash Detection Model - commented out for now, keeping code for later
+    // {
+    //   id: 'software-1',
+    //   title: 'Trash Detection Model',
+    //   description: 'Trained a YOLO-based object detection model on a Kaggle waste dataset to classify and count trash items in real time.',
+    //   tech: ['Python', 'OpenCV', 'YOLO', 'NumPy', 'Kaggle', 'PyTorch', 'Supervision', 'FastAPI'],
+    //   category: 'software',
+    //   image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Trash+Detection+Model',
+    //   goal: 'Develop a real-time object detection system that can identify and classify different types of trash items from camera feeds, enabling automated waste management and recycling.',
+    //   challenges: [
+    //     'Training a YOLO model on a diverse waste dataset with varying lighting and object conditions',
+    //     'Optimizing model performance for real-time inference on edge devices',
+    //     'Deploying the model as a FastAPI service for streaming video processing',
+    //     'Integrating with AR headset cameras for live detection and visual feedback'
+    //   ],
+    //   solution: 'Trained a YOLO-based object detection model using PyTorch on a comprehensive Kaggle waste dataset. Implemented preprocessing pipelines with OpenCV and NumPy for image augmentation and normalization. Deployed the model as a FastAPI service that can process video streams in real-time, enabling integration with AR headset cameras for live detection and visual feedback. Used Supervision library for post-processing and visualization of detection results.'
+    // },
     {
       id: 'software-3',
       title: 'NASA Spacesuit User Interface Technologies',
@@ -39,6 +24,7 @@ export const projects = {
       tech: ['Unity C#', 'Magic Leap', 'Object Detection', 'AR Development', 'Jira', 'GitHub'],
       category: 'software',
       image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=NASA+Spacesuit+UI',
+      video: 'https://www.youtube.com/embed/IWt7Vkgpcjg',
       goal: 'Develop comprehensive software tools and an intuitive AR interface for astronaut spacesuits that enhance mission capabilities and astronaut safety during space operations.',
       challenges: [
         'Leading a team of 30+ students with varying skill levels and coordinating their contributions',
@@ -50,6 +36,22 @@ export const projects = {
         'Ensuring implementation feasibility according to NASA project specifications'
       ],
       solution: 'As Project Lead, delegated technical proposal writing tasks and brainstormed software solutions that aligned with NASA specifications, resulting in top 10 NASA selected proposals. Coordinated with multiple stakeholders including club leadership, administration, faculty, and NASA advisors to secure funding and meet critical deadlines. Defined project milestones and timeline, managing Agile development sprints and tracking progress with Jira and GitHub. Doubled team size by creating comprehensive technical documentation that made the project accessible to more students, fostering an inclusive environment. Successfully tested and presented the final project at NASA Johnson Space Center, culminating in a final paper documenting findings and development process. The project delivered object detection capabilities, telemetry display systems, navigation algorithms, and an AI assistant, all integrated into an intuitive AR interface using Unity C# and Magic Leap technology.'
+    },
+    {
+      id: 'software-2',
+      title: 'Autonomous Driving Research - Columbia Engineering',
+      description: 'Implemented and tested PID control python scripts on a Raspberry Pi and AWS Deepracer, integrating IMU feedback with Kalman filtering for state estimation and localization.',
+      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer', 'PID Control', 'Kalman Filter', 'IMU'],
+      category: 'software',
+      image: '/autonomous driving/car.png',
+      goal: 'Develop and test autonomous driving algorithms using PID control and sensor fusion techniques to regulate vehicle speed and trajectory in urban environments.',
+      challenges: [
+        'Integrating IMU feedback with Kalman filtering for accurate state estimation',
+        'Implementing PID control algorithms for precise speed and trajectory regulation',
+        'Testing algorithms on scaled-down models of urban intersections',
+        'Optimizing control parameters for different driving scenarios'
+      ],
+      solution: 'Implemented PID control scripts in Python for both Raspberry Pi and AWS Deepracer platforms. Integrated IMU sensor feedback with Kalman filtering algorithms to achieve accurate state estimation and localization. Developed comprehensive testing procedures using scaled-down models of urban intersections to evaluate algorithm performance. Created data logging and visualization tools to analyze control system behavior and optimize PID parameters for different driving conditions.'
     }
   ],
   robotics: [
@@ -60,6 +62,7 @@ export const projects = {
       tech: ['PCB Design', 'Python', 'NumPy', 'CV2', 'GPIO', 'CAD', 'Raspberry Pi'],
       category: 'robotics',
       image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Autonomous+Claw+Robot',
+      video: '/IMG_6401.mov',
       goal: 'Create an autonomous robotic system that can navigate, detect objects using computer vision, and manipulate objects with a claw mechanism, all while operating independently.',
       challenges: [
         'Integrating multiple hardware components (motors, cameras, servos, sensors) into a cohesive system',
@@ -73,38 +76,22 @@ export const projects = {
   ],
   webApp: [
     {
-      id: 'web-1',
-      title: 'Cafe List Website',
-      description: 'Built a full stack website for coffee shop lovers that allows users to sign in, view and like nearby cafes and interact with other users\' cafe preferences.',
-      tech: ['Google Maps API', 'MySQL', 'Node.js', 'React', 'Express', 'Railway', 'Render', 'GitHub Pages'],
+      id: 'web-6',
+      title: 'Pinball Game',
+      description: 'An interactive pinball game built with modern web technologies featuring realistic physics, scoring system, and engaging gameplay mechanics.',
+      tech: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Physics Engine'],
       category: 'webApp',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Cafe+List+Website',
-      goal: 'Create a social platform where coffee enthusiasts can discover, save, and share their favorite cafes with a community of like-minded users.',
+      image: '/pinball/IMG_9886.JPG',
+      images: ['/pinball/IMG_9886.JPG', '/pinball/IMG_9874.JPG', '/pinball/IMG_9795.JPG'],
+      goal: 'Create an engaging and interactive pinball game that provides an authentic arcade experience with smooth physics, responsive controls, and entertaining gameplay.',
       challenges: [
-        'Designing a scalable MySQL database schema for users, cafes, and interactions',
-        'Implementing Google Maps API for location-based services and map visualization',
-        'Building a full-stack application with separate frontend and backend deployments',
-        'Creating a dynamic and shareable user experience with real-time interactions',
-        'Hosting frontend, backend, and database across multiple platforms (Railway, Render, GitHub Pages)'
+        'Implementing realistic ball physics and collision detection',
+        'Creating responsive controls that feel natural and intuitive',
+        'Designing an engaging game layout with multiple bumpers and targets',
+        'Building a scoring system that rewards skillful play',
+        'Optimizing performance for smooth 60fps gameplay'
       ],
-      solution: 'Developed a full-stack web application with React frontend and Node.js/Express backend. Designed and implemented a comprehensive MySQL database schema to store user accounts, cafe information, likes, and user preferences. Integrated Google Maps API to display cafe locations, enable location-based searches, and provide interactive map features. Implemented user authentication and authorization for secure sign-in functionality. Deployed the frontend on GitHub Pages, backend on Railway, and database on Render, ensuring proper CORS configuration and API connectivity across platforms. Created an intuitive UI that allows users to discover cafes, like their favorites, and see what other users are enjoying.'
-    },
-    {
-      id: 'web-2',
-      title: 'LookBook App - DevFest 2025 Hackathon',
-      description: 'Developed backend features including photo upload/posting and account management for a fashion social media platform.',
-      tech: ['MySQL', 'Node.js', 'XCode', 'Render', 'Railway'],
-      category: 'webApp',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=LookBook+App',
-      goal: 'Build a fashion social media platform that allows users to share outfit photos and manage their fashion profiles, developed under hackathon time constraints.',
-      challenges: [
-        'Developing robust backend APIs for photo upload and storage under time pressure',
-        'Implementing secure account management and user authentication',
-        'Collaborating effectively in a team of 4 with clear communication and task delegation',
-        'Managing time effectively to deliver a working product within hackathon deadlines',
-        'Integrating backend services with mobile app development in XCode'
-      ],
-      solution: 'Collaborated in a team of 4 to develop the backend infrastructure for a fashion social media platform. Built RESTful APIs using Node.js and Express for photo upload, posting, and account management. Designed MySQL database schema for users, posts, and social interactions. Implemented secure authentication and authorization systems. Deployed backend services on Railway and Render for reliability. Worked closely with frontend developers using XCode to ensure seamless API integration. Enhanced team communication, problem-solving, and time management skills while delivering a functional product within hackathon constraints.'
+      solution: 'Developed a fully interactive pinball game using HTML5 Canvas for rendering and JavaScript for game logic. Implemented a custom physics engine to handle ball movement, collisions with bumpers, flippers, and walls. Created responsive flipper controls using keyboard and mouse inputs. Designed an engaging game layout with multiple scoring targets, bumpers, and special features. Built a comprehensive scoring system that tracks points, multipliers, and bonus rounds. Optimized rendering and physics calculations to maintain smooth 60fps gameplay across different devices.'
     },
     {
       id: 'web-3',
@@ -112,7 +99,9 @@ export const projects = {
       description: 'Building MVP of a women\'s health app, from Figma designs to a deployed Apple Testflight app, with React Native and Expo tools.',
       tech: ['React Native', 'Expo', 'SQLite', 'AWS RDS', 'Apple HealthKit', 'Figma'],
       category: 'webApp',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Sachi+Health+App',
+      image: '/sachihealth/IMG_7735.PNG',
+      images: ['/sachihealth/IMG_7735.PNG', '/sachihealth/IMG_7737.PNG', '/sachihealth/IMG_7739.PNG', '/sachihealth/IMG_7740.PNG'],
+      videos: ['/sachihealth/RPReplay_Final1762448307.mov', '/sachihealth/RPReplay_Final1767988976.mov'],
       goal: 'Develop a comprehensive women\'s health mobile application that integrates with wearables and health data to provide personalized health insights and medication management.',
       challenges: [
         'Translating Figma designs into a fully functional React Native application',
@@ -131,6 +120,7 @@ export const projects = {
       tech: ['React', 'HTML', 'CSS', 'GitHub', 'Vercel'],
       category: 'webApp',
       image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=DivHacks+Website',
+      video: '/divhacks/divhacks.mov',
       goal: 'Migrate and modernize the DivHacks hackathon website to improve usability, accessibility, and functionality for 300+ hackers and sponsors.',
       challenges: [
         'Migrating legacy HTML/CSS site to modern React architecture',
@@ -143,12 +133,29 @@ export const projects = {
       solution: 'Led a team of web developers by defining clear objectives, delegating tasks, and driving weekly check-ins to ensure timely delivery. Successfully migrated the legacy HTML/CSS site to React, improving code maintainability and performance. Implemented branch-based workflows in GitHub to enable parallel development and code review processes. Configured automated deployments with Vercel for continuous integration. Built intuitive features including mobile-responsive layouts, live-updating schedules, and a beginner resources page. Improved site usability and accessibility, resulting in a better experience for 300+ hackers and sponsors during the MLH 2026 season launch.'
     },
     {
+      id: 'web-1',
+      title: 'Cafe List Website',
+      description: 'Built a full stack website for coffee shop lovers that allows users to sign in, view and like nearby cafes and interact with other users\' cafe preferences.',
+      tech: ['Google Maps API', 'MySQL', 'Node.js', 'React', 'Express', 'Railway', 'Render', 'GitHub Pages'],
+      category: 'webApp',
+      image: '/cafelist/IMG_3CA4D8AFCBBC-1.jpeg',
+      goal: 'Create a social platform where coffee enthusiasts can discover, save, and share their favorite cafes with a community of like-minded users.',
+      challenges: [
+        'Designing a scalable MySQL database schema for users, cafes, and interactions',
+        'Implementing Google Maps API for location-based services and map visualization',
+        'Building a full-stack application with separate frontend and backend deployments',
+        'Creating a dynamic and shareable user experience with real-time interactions',
+        'Hosting frontend, backend, and database across multiple platforms (Railway, Render, GitHub Pages)'
+      ],
+      solution: 'Developed a full-stack web application with React frontend and Node.js/Express backend. Designed and implemented a comprehensive MySQL database schema to store user accounts, cafe information, likes, and user preferences. Integrated Google Maps API to display cafe locations, enable location-based searches, and provide interactive map features. Implemented user authentication and authorization for secure sign-in functionality. Deployed the frontend on GitHub Pages, backend on Railway, and database on Render, ensuring proper CORS configuration and API connectivity across platforms. Created an intuitive UI that allows users to discover cafes, like their favorites, and see what other users are enjoying.'
+    },
+    {
       id: 'web-5',
       title: 'Studio April Showers Website',
       description: 'Personal portfolio and showcase website for creative work.',
       tech: ['Web Development'],
       category: 'webApp',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Studio+April+Showers',
+      image: '/april showers website/studio.png',
       goal: 'Create a professional website to showcase creative work and portfolio pieces.',
       challenges: [
         'Designing an intuitive and visually appealing user interface',
@@ -157,22 +164,23 @@ export const projects = {
       ],
       solution: 'Developed a clean and modern website to showcase creative work. Focused on user experience with intuitive navigation and fast loading times. Implemented responsive design principles to ensure optimal viewing across desktop, tablet, and mobile devices. The site is live at studioaprilshowers.com.'
     },
-    {
-      id: 'web-6',
-      title: 'Pinball Game',
-      description: 'An interactive pinball game built with modern web technologies featuring realistic physics, scoring system, and engaging gameplay mechanics.',
-      tech: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Physics Engine'],
-      category: 'webApp',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Pinball+Game',
-      goal: 'Create an engaging and interactive pinball game that provides an authentic arcade experience with smooth physics, responsive controls, and entertaining gameplay.',
-      challenges: [
-        'Implementing realistic ball physics and collision detection',
-        'Creating responsive controls that feel natural and intuitive',
-        'Designing an engaging game layout with multiple bumpers and targets',
-        'Building a scoring system that rewards skillful play',
-        'Optimizing performance for smooth 60fps gameplay'
-      ],
-      solution: 'Developed a fully interactive pinball game using HTML5 Canvas for rendering and JavaScript for game logic. Implemented a custom physics engine to handle ball movement, collisions with bumpers, flippers, and walls. Created responsive flipper controls using keyboard and mouse inputs. Designed an engaging game layout with multiple scoring targets, bumpers, and special features. Built a comprehensive scoring system that tracks points, multipliers, and bonus rounds. Optimized rendering and physics calculations to maintain smooth 60fps gameplay across different devices.'
-    }
+    // LookBook App - commented out for now, keeping code for later
+    // {
+    //   id: 'web-2',
+    //   title: 'LookBook App - DevFest 2025 Hackathon',
+    //   description: 'Developed backend features including photo upload/posting and account management for a fashion social media platform.',
+    //   tech: ['MySQL', 'Node.js', 'XCode', 'Render', 'Railway'],
+    //   category: 'webApp',
+    //   image: '/lookbook.png',
+    //   goal: 'Build a fashion social media platform that allows users to share outfit photos and manage their fashion profiles, developed under hackathon time constraints.',
+    //   challenges: [
+    //     'Developing robust backend APIs for photo upload and storage under time pressure',
+    //     'Implementing secure account management and user authentication',
+    //     'Collaborating effectively in a team of 4 with clear communication and task delegation',
+    //     'Managing time effectively to deliver a working product within hackathon deadlines',
+    //     'Integrating backend services with mobile app development in XCode'
+    //   ],
+    //   solution: 'Collaborated in a team of 4 to develop the backend infrastructure for a fashion social media platform. Built RESTful APIs using Node.js and Express for photo upload, posting, and account management. Designed MySQL database schema for users, posts, and social interactions. Implemented secure authentication and authorization systems. Deployed backend services on Railway and Render for reliability. Worked closely with frontend developers using XCode to ensure seamless API integration. Enhanced team communication, problem-solving, and time management skills while delivering a functional product within hackathon constraints.'
+    // }
   ]
 };

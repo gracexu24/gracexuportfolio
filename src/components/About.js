@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     paddingVertical: 80,
     paddingHorizontal: 30,
+    fontFamily: "'Courier New', 'Courier', 'Monaco', 'Menlo', 'Consolas', 'Roboto Mono', monospace",
   },
   content: {
     maxWidth: 800,
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 28,
     color: '#4a4a4a',
-    textAlign: 'center',
+    textAlign: 'left',
   },
 });
 

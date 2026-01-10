@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#75B2DD',
     paddingVertical: 80,
     paddingHorizontal: 30,
+    fontFamily: "'Courier New', 'Courier', 'Monaco', 'Menlo', 'Consolas', 'Roboto Mono', monospace",
   },
   content: {
     maxWidth: 600,
@@ -54,7 +55,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#5A9BC4',
     paddingHorizontal: 40,
     paddingVertical: 16,
-    borderRadius: 8,
     minWidth: 150,
     alignItems: 'center',
   },

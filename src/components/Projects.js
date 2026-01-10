@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     paddingVertical: 80,
     paddingHorizontal: 30,
+    fontFamily: "'Courier New', 'Courier', 'Monaco', 'Menlo', 'Consolas', 'Roboto Mono', monospace",
   },
   content: {
     maxWidth: 1200,
@@ -69,15 +70,9 @@ const styles = StyleSheet.create({
   },
   projectCard: {
     backgroundColor: '#ffffff',
-    borderRadius: 12,
     padding: 24,
     width: '100%',
     maxWidth: 350,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 4,
   },
   projectTitle: {
     fontSize: 24,
@@ -100,7 +95,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#e3f2fd',
     paddingHorizontal: 12,
     paddingVertical: 6,
-    borderRadius: 12,
     marginRight: 8,
     marginBottom: 8,
   },
@@ -112,7 +106,6 @@ const styles = StyleSheet.create({
   projectButton: {
     backgroundColor: '#5A9BC4',
     paddingVertical: 12,
-    borderRadius: 8,
     alignItems: 'center',
   },
   projectButtonText: {
