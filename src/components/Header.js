@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const Header = () => {
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 1200
+  );
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Calculate responsive font sizes
+  const getResponsiveFontSize = (baseSize, minSize, maxSize) => {
+    const scale = windowWidth / 1200; // Base width for scaling
+    let fontSize = baseSize * scale;
+    fontSize = Math.max(minSize, Math.min(maxSize, fontSize));
+    return fontSize;
+  };
+
+  const titleFontSize = getResponsiveFontSize(48, 28, 48);
+  const descriptionFontSize = getResponsiveFontSize(18, 14, 18);
+  const descriptionLineHeight = descriptionFontSize * 1.56; // Maintain proportional line height
+
   const scrollToSection = (sectionId) => {
     if (typeof document !== 'undefined') {
       const element = document.getElementById(sectionId);
@@ -47,8 +74,8 @@ const Header = () => {
             />
           )}
           <View style={styles.heroText}>
-            <Text style={styles.heroTitle}>Hello, I'm Grace Xu</Text>
-            <Text style={styles.heroDescription}>
+            <Text style={[styles.heroTitle, { fontSize: titleFontSize }]}>Hello, I'm Grace Xu</Text>
+            <Text style={[styles.heroDescription, { fontSize: descriptionFontSize, lineHeight: descriptionLineHeight }]}>
             I’m a sophomore at Columbia Engineering studying computer science and electrical engineering. I’m excited by the intersection of software, hardware, and human centered design and am interested in wearable tech, robotics, full-stack development and project management. My project experience is in AR development, mechatronics, and full-stack mobile and web development. I’m excited to continue to work in collaborative engineering teams to solve interdisciplinary real-world challenges.
 
             {'\n\n'}Check out my portfolio below! My email is gx2168@columbia.edu 
@@ -113,15 +140,12 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
   },
   heroTitle: {
-    fontSize: 48,
     fontWeight: 'bold',
     color: '#ffffff',
     textAlign: 'left',
     marginBottom: 24,
   },
   heroDescription: {
-    fontSize: 18,
-    lineHeight: 28,
     color: '#ffffff',
     textAlign: 'left',
   },
