@@ -91,6 +91,27 @@ const ProjectDetail = ({ project, onBack }) => {
           </View>
         </View>
 
+        {project.links && project.links.length > 0 && (
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>Links</Text>
+            <View style={styles.linksContainer}>
+              {project.links.map((link, index) => (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.linkButton}
+                  onPress={() => {
+                    if (typeof window !== 'undefined' && link.url) {
+                      window.open(link.url, '_blank', 'noopener,noreferrer');
+                    }
+                  }}
+                >
+                  <Text style={styles.linkText}>{link.label || link.url}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </View>
+        )}
+
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Goal</Text>
           <Text style={styles.sectionText}>{project.goal}</Text>
@@ -220,6 +241,23 @@ const styles = StyleSheet.create({
     lineHeight: 28,
     color: '#4a4a4a',
     flex: 1,
+  },
+  linksContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+  },
+  linkButton: {
+    backgroundColor: '#5A9BC4',
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    marginRight: 12,
+    marginBottom: 12,
+  },
+  linkText: {
+    fontSize: 14,
+    color: '#ffffff',
+    fontWeight: '600',
   },
 });
 

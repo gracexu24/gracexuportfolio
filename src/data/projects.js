@@ -19,12 +19,15 @@ export const projects = {
     // },
     {
       id: 'software-3',
-      title: 'NASA Spacesuit User Interface Technologies',
-      description: 'Lead 30+ college students in collaborative coding development to engineer software tools (object detection, telemetry display, navigation algorithms, AI assistant) and design an intuitive AR interface for astronaut spacesuits with Magic Leap headset.',
-      tech: ['Unity C#', 'Magic Leap', 'Object Detection', 'AR Development', 'Jira', 'GitHub'],
+      title: 'Augmented Reality Spacesuit Interface on Magic Leap',
+      description: 'Columbia Space Initiative SUITS Mission Lead, participating in NASA Spacesuit User Interface Technologies design challenge. Building an intuitive AR interface for astronaut spacesuits. ',
+      tech: ['Unity C#', 'Magic Leap', 'AR Development','GitHub', 'Python', 'UI/UX', 'Navigation', 'AI'],
       category: 'software',
       image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=NASA+Spacesuit+UI',
       video: 'https://www.youtube.com/embed/IWt7Vkgpcjg',
+      links: [
+        { label: 'NASA SUITS Challenge', url: 'https://www.nasa.gov/learning-resources/spacesuit-user-interface-technologies-for-students/'}
+      ],
       goal: 'Develop comprehensive software tools and an intuitive AR interface for astronaut spacesuits that enhance mission capabilities and astronaut safety during space operations.',
       challenges: [
         'Leading a team of 30+ students with varying skill levels and coordinating their contributions',
@@ -33,18 +36,20 @@ export const projects = {
         'Coordinating with club leadership, administration, faculty, and NASA advisors to secure funding and meet deadlines',
         'Managing Agile development sprints and tracking progress across multiple workstreams',
         'Creating accessible technical documentation to onboard new team members',
-        'Ensuring implementation feasibility according to NASA project specifications'
+        'Ensuring implementation feasibility according to NASA project specifications', 
+        'Desiging full-stack software tools (telemetry display, navigation asisstance, AI assistant, etc).'
       ],
       solution: 'As Project Lead, delegated technical proposal writing tasks and brainstormed software solutions that aligned with NASA specifications, resulting in top 10 NASA selected proposals. Coordinated with multiple stakeholders including club leadership, administration, faculty, and NASA advisors to secure funding and meet critical deadlines. Defined project milestones and timeline, managing Agile development sprints and tracking progress with Jira and GitHub. Doubled team size by creating comprehensive technical documentation that made the project accessible to more students, fostering an inclusive environment. Successfully tested and presented the final project at NASA Johnson Space Center, culminating in a final paper documenting findings and development process. The project delivered object detection capabilities, telemetry display systems, navigation algorithms, and an AI assistant, all integrated into an intuitive AR interface using Unity C# and Magic Leap technology.'
     },
     {
       id: 'software-2',
-      title: 'Autonomous Driving Research - Columbia Engineering',
-      description: 'Implemented and tested PID control python scripts on a Raspberry Pi and AWS Deepracer, integrating IMU feedback with Kalman filtering for state estimation and localization.',
-      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer', 'PID Control', 'Kalman Filter', 'IMU'],
+      title: 'AWS Deepracer Project - DitecT Lab at Columbia University',
+      description: 'Programed and tested control scripts for an AWS Deepracer autonomous driving project.',
+      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer'],
       category: 'software',
       image: '/autonomous driving/car.png',
       goal: 'Develop and test autonomous driving algorithms using PID control and sensor fusion techniques to regulate vehicle speed and trajectory in urban environments.',
+      
       challenges: [
         'Integrating IMU feedback with Kalman filtering for accurate state estimation',
         'Implementing PID control algorithms for precise speed and trajectory regulation',
@@ -58,12 +63,12 @@ export const projects = {
     {
       id: 'robotics-1',
       title: 'Autonomous Driving Claw Robot',
-      description: 'Designed, prototyped, and built a driving robotic claw that picked up and stored objects using motors, cameras, servos, laser cut elements, ultrasonic distance sensors, and speakers.',
-      tech: ['PCB Design', 'Python', 'NumPy', 'CV2', 'GPIO', 'CAD', 'Raspberry Pi'],
+      description: 'Designed, prototyped, and built a driving robotic claw that searched for, picked up and stored objects autonomously.',
+      tech: ['Python', 'Computer Vision', 'CAD', 'Raspberry Pi','PCB Design'],
       category: 'robotics',
       image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Autonomous+Claw+Robot',
       video: '/IMG_6401.mov',
-      goal: 'Create an autonomous robotic system that can navigate, detect objects using computer vision, and manipulate objects with a claw mechanism, all while operating independently.',
+      goal: 'Designed and built an autonomous robotic vehicle that can navigate, detect objects using computer vision, and manipulate objects with a claw mechanism, all while operating independently.',
       challenges: [
         'Integrating multiple hardware components (motors, cameras, servos, sensors) into a cohesive system',
         'Implementing real-time computer vision for object detection and tracking',
@@ -77,9 +82,9 @@ export const projects = {
   webApp: [
     {
       id: 'web-6',
-      title: 'Pinball Game',
-      description: 'An interactive pinball game built with modern web technologies featuring realistic physics, scoring system, and engaging gameplay mechanics.',
-      tech: ['JavaScript', 'HTML5 Canvas', 'CSS3', 'Physics Engine'],
+      title: 'Pinball Machine Game',
+      description: 'Built a working pinball machine game from scratch using Arduino, a custom circuit board, and a 3D printed and laser-cut components.',
+      tech: ['Circuit Board Design', 'CAD', '3D Printing', 'Arduino', 'Soldering'],
       category: 'webApp',
       image: '/pinball/IMG_9886.JPG',
       images: ['/pinball/IMG_9886.JPG', '/pinball/IMG_9874.JPG', '/pinball/IMG_9795.JPG'],
@@ -95,9 +100,9 @@ export const projects = {
     },
     {
       id: 'web-3',
-      title: 'Sachi Health Startup - Full Stack App',
-      description: 'Building MVP of a women\'s health app, from Figma designs to a deployed Apple Testflight app, with React Native and Expo tools.',
-      tech: ['React Native', 'Expo', 'SQLite', 'AWS RDS', 'Apple HealthKit', 'Figma'],
+      title: 'Sachi Health Mobile App',
+      description: 'Building MVP of a PCOS women\'s health app for a startup, focusing on backend, data integration, and scheduling features.',
+      tech: ['React Native', 'Typescript', 'Expo', 'SQLite', 'AWS RDS', 'Apple HealthKit', 'Figma', 'Mobile Notifications'],
       category: 'webApp',
       image: '/sachihealth/IMG_7735.PNG',
       images: ['/sachihealth/IMG_7735.PNG', '/sachihealth/IMG_7737.PNG', '/sachihealth/IMG_7739.PNG', '/sachihealth/IMG_7740.PNG'],
@@ -116,11 +121,14 @@ export const projects = {
     {
       id: 'web-4',
       title: 'DivHacks Hackathon Website',
-      description: 'Directed team of web developers to launch DivHack\'s hackathon website, coordinating across outreach and design teams.',
+      description: 'Columbia Women in Computer Science\'s Annual Hackathon Technical Development Lead. Launched DivHack\'s hackathon website for the 2026 MLH season.',
       tech: ['React', 'HTML', 'CSS', 'GitHub', 'Vercel'],
       category: 'webApp',
       image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=DivHacks+Website',
       video: '/divhacks/divhacks.mov',
+      links: [
+        { label: 'Website', url: 'https://columbiadivhacks.com' }
+      ],
       goal: 'Migrate and modernize the DivHacks hackathon website to improve usability, accessibility, and functionality for 300+ hackers and sponsors.',
       challenges: [
         'Migrating legacy HTML/CSS site to modern React architecture',
@@ -136,7 +144,7 @@ export const projects = {
       id: 'web-1',
       title: 'Cafe List Website',
       description: 'Built a full stack website for coffee shop lovers that allows users to sign in, view and like nearby cafes and interact with other users\' cafe preferences.',
-      tech: ['Google Maps API', 'MySQL', 'Node.js', 'React', 'Express', 'Railway', 'Render', 'GitHub Pages'],
+      tech: [ 'Backend', 'Google Maps API', 'MySQL', 'Node.js', 'Express', 'Railway', 'Render', 'GitHub Pages'],
       category: 'webApp',
       image: '/cafelist/IMG_3CA4D8AFCBBC-1.jpeg',
       goal: 'Create a social platform where coffee enthusiasts can discover, save, and share their favorite cafes with a community of like-minded users.',
@@ -152,10 +160,13 @@ export const projects = {
     {
       id: 'web-5',
       title: 'Studio April Showers Website',
-      description: 'Personal portfolio and showcase website for creative work.',
-      tech: ['Web Development'],
+      description: 'Personal portfolio to showcase my handmade jewelry business Studio April Showers.',
+      tech: ['UI', 'HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
       category: 'webApp',
       image: '/april showers website/studio.png',
+      links: [
+        { label: 'Website', url: 'https://studioaprilshowers.com' }
+      ],
       goal: 'Create a professional website to showcase creative work and portfolio pieces.',
       challenges: [
         'Designing an intuitive and visually appealing user interface',
