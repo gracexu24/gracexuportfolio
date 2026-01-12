@@ -21,14 +21,14 @@ export const projects = {
       id: 'software-3',
       title: 'Augmented Reality Spacesuit Interface on Magic Leap',
       description: 'Columbia Space Initiative SUITS Mission Lead, participating in NASA Spacesuit User Interface Technologies design challenge. Building an intuitive AR interface for astronaut spacesuits. ',
-      tech: ['Unity C#', 'Magic Leap', 'AR Development','GitHub', 'Python', 'UI/UX', 'Navigation', 'AI'],
+      tech: ['Unity','C#', 'Magic Leap 2', 'AR Development','GitHub', 'Python', 'UI/UX', 'Navigation', 'AI'],
       category: 'software',
       image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=NASA+Spacesuit+UI',
       video: 'https://www.youtube.com/embed/IWt7Vkgpcjg',
       links: [
         { label: 'NASA SUITS Challenge', url: 'https://www.nasa.gov/learning-resources/spacesuit-user-interface-technologies-for-students/'}
       ],
-      goal: 'Develop comprehensive software tools and an intuitive AR interface for astronaut spacesuits that enhance mission capabilities and astronaut safety during space operations.',
+      goal: 'Compete in NASA SUITS Challenge. Propose and develop comprehensive software tools and an intuitive AR interface for astronaut spacesuits that enhance mission capabilities and astronaut safety during space operations.',
       challenges: [
         'Leading a team of 30+ students with varying skill levels and coordinating their contributions',
         'Engineering multiple software components: object detection, telemetry display, navigation algorithms, and AI assistant',
