@@ -28,35 +28,18 @@ export const projects = {
       links: [
         { label: 'NASA SUITS Challenge', url: 'https://www.nasa.gov/learning-resources/spacesuit-user-interface-technologies-for-students/'}
       ],
-      goal: 'Compete in NASA SUITS Challenge. Propose and develop comprehensive software tools and an intuitive AR interface for astronaut spacesuits that enhance mission capabilities and astronaut safety during space operations.',
-      challenges: [
-        'Leading a team of 30+ students with varying skill levels and coordinating their contributions',
-        'Engineering multiple software components: object detection, telemetry display, navigation algorithms, and AI assistant',
-        'Designing an intuitive AR interface for use in space environments with Magic Leap headset',
-        'Coordinating with club leadership, administration, faculty, and NASA advisors to secure funding and meet deadlines',
-        'Managing Agile development sprints and tracking progress across multiple workstreams',
-        'Creating accessible technical documentation to onboard new team members',
-        'Ensuring implementation feasibility according to NASA project specifications', 
-        'Desiging full-stack software tools (telemetry display, navigation asisstance, AI assistant, etc).'
-      ],
-      solution: 'As Project Lead, delegated technical proposal writing tasks and brainstormed software solutions that aligned with NASA specifications, resulting in top 10 NASA selected proposals. Coordinated with multiple stakeholders including club leadership, administration, faculty, and NASA advisors to secure funding and meet critical deadlines. Defined project milestones and timeline, managing Agile development sprints and tracking progress with Jira and GitHub. Doubled team size by creating comprehensive technical documentation that made the project accessible to more students, fostering an inclusive environment. Successfully tested and presented the final project at NASA Johnson Space Center, culminating in a final paper documenting findings and development process. The project delivered object detection capabilities, telemetry display systems, navigation algorithms, and an AI assistant, all integrated into an intuitive AR interface using Unity C# and Magic Leap technology.'
+      goal: 'Compete in the NASA SUITS Challenge. Propose and develop software tools and an intuitive AR interface for astronaut spacesuits that enhance mission capabilities and astronaut safety during space operations.',
+      solution: 'I have participated in this challenge for two years. SUITS is one of the missions that is part of Columbia Space Initiative, Columbia’s largest engineering club, that competes in NASA’s design challenge. In the 24-25 school year, I helped design and create the map feature that allowed functionality such as dropping location pins, tracking locations of moving objects like other astronauts and rovers, and navigating to points of interest on the best paths. I programmed in C# and python to get data from a simulated telemetry source and display accurate location readings and map these locations on the interface. The video shows a quick demo of the basic layout and usage of our design. At the end of the school year, our team traveled to the NASA space center to test our project in a simulated moon environment and present it to NASA engineers and the community. \n\nIn the 25-26 school year, I am currently serving as the Project (Mission) Lead for a 30 person team of engineers and designers. This year, we have completed and submitted a 20 page technical proposal outlining our plan to solve this year’s challenge. We are currently working on developing our interface completely from scratch on a Magic Leap 2 (pivoting from Hololens which we used in the year prior). I’ve been working to teach Unity and scripting basics to our many new members and create a collaborative engineering environment amongst the team. Our new design will include intuitive menu and navigation tools, introducing sound and motion gestures to reduce complexity and make the experience faster for astronauts. We are also implementing a new AI voice assistant and incorporating computer vision technologies to better identify surrounding objects. \n\nThis is one of my favorite projects to be a part of and I’m excited to share the new developments we make soon! '
     },
     {
       id: 'software-2',
       title: 'AWS Deepracer Project - DitecT Lab at Columbia University',
       description: 'Programed and tested control scripts for an AWS Deepracer autonomous driving project.',
-      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer'],
+      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer', 'Mathplotlib'],
       category: 'software',
       image: '/autonomous driving/car.png',
-      goal: 'Develop and test autonomous driving algorithms using PID control and sensor fusion techniques to regulate vehicle speed and trajectory in urban environments.',
-      
-      challenges: [
-        'Integrating IMU feedback with Kalman filtering for accurate state estimation',
-        'Implementing PID control algorithms for precise speed and trajectory regulation',
-        'Testing algorithms on scaled-down models of urban intersections',
-        'Optimizing control parameters for different driving scenarios'
-      ],
-      solution: 'Implemented PID control scripts in Python for both Raspberry Pi and AWS Deepracer platforms. Integrated IMU sensor feedback with Kalman filtering algorithms to achieve accurate state estimation and localization. Developed comprehensive testing procedures using scaled-down models of urban intersections to evaluate algorithm performance. Created data logging and visualization tools to analyze control system behavior and optimize PID parameters for different driving conditions.'
+      goal: 'Develop and test control scripts for a robotic car to analyze autonomous driving algorithms in a scaled-down model urban environment.',
+      solution: 'My team’s task was to use IMU feedback to control the car’s speed and direction. I used the car’s recorded acceleration to estimate velocity and write PID control scripts that kept the velocity of the car constant. I recorded and graphed the data after testing and found that filtering of noise from the IMU sensor was needed to prevent the loss of control in the vehicle. We found that this was still not as accurate as we would’ve hoped and proposed the use of wheel encoders in the next iteration. We also tested used IMU readings for localization purposes. I tested the accuracy of our script\'s ability to estimate the distance traveled from start to finish. '
     }
   ],
   robotics: [
@@ -68,15 +51,8 @@ export const projects = {
       category: 'robotics',
       image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Autonomous+Claw+Robot',
       video: '/IMG_6401.mov',
-      goal: 'Designed and built an autonomous robotic vehicle that can navigate, detect objects using computer vision, and manipulate objects with a claw mechanism, all while operating independently.',
-      challenges: [
-        'Integrating multiple hardware components (motors, cameras, servos, sensors) into a cohesive system',
-        'Implementing real-time computer vision for object detection and tracking',
-        'Designing and fabricating custom PCB for component connectivity',
-        'Developing PID control algorithms for precise autonomous movement',
-        'Creating a robust mechanical design with laser-cut elements'
-      ],
-      solution: 'Designed and prototyped a complete robotic system from scratch, including custom PCB design for component integration. Implemented computer vision algorithms using CV2 and NumPy for real-time object detection and tracking. Coded the robot\'s autonomous movement using PID control algorithms with GPIO control on Raspberry Pi. Integrated ultrasonic distance sensors for obstacle avoidance and navigation. Built a mechanical claw system with servo control for object manipulation. Created CAD designs and laser-cut custom elements for the robot chassis and components.'
+      goal: 'Build a robotic vehicle that can navigate, find objects, and manipulate objects with a claw mechanism, and store them. Named “Phoney Bot”, I wanted this vehicle to find and pick up phones and prevent people from taking the phone out.',
+      solution: 'I designed this project in CAD and built it with a Raspberry Pi and hardware components (motors, cameras, servos, lights, laser cut parts, etc). I used Python to take in camera input, detect objects, and control the vehicle to adjust and drive towards the object. I used servos to control the claws and phone carrying ramp. I used ultrasonic sensors for obstacle detection and to detect when the robot was being approached, which would cause a blaring alarm. This project was a great experience for me to get hands-on experience with the hardware, electronics, and software and combine a lot of different features and components. '
     }
   ],
   webApp: [
@@ -88,15 +64,8 @@ export const projects = {
       category: 'webApp',
       image: '/pinball/IMG_9886.JPG',
       images: ['/pinball/IMG_9886.JPG', '/pinball/IMG_9874.JPG', '/pinball/IMG_9795.JPG'],
-      goal: 'Create an engaging and interactive pinball game that provides an authentic arcade experience with smooth physics, responsive controls, and entertaining gameplay.',
-      challenges: [
-        'Implementing realistic ball physics and collision detection',
-        'Creating responsive controls that feel natural and intuitive',
-        'Designing an engaging game layout with multiple bumpers and targets',
-        'Building a scoring system that rewards skillful play',
-        'Optimizing performance for smooth 60fps gameplay'
-      ],
-      solution: 'Developed a fully interactive pinball game using HTML5 Canvas for rendering and JavaScript for game logic. Implemented a custom physics engine to handle ball movement, collisions with bumpers, flippers, and walls. Created responsive flipper controls using keyboard and mouse inputs. Designed an engaging game layout with multiple scoring targets, bumpers, and special features. Built a comprehensive scoring system that tracks points, multipliers, and bonus rounds. Optimized rendering and physics calculations to maintain smooth 60fps gameplay across different devices.'
+      goal: 'For Columbia’s Art of Engineering course, teams of 4 were challenged to create electronic games from scratch. We chose to create a fully functioning pinball machine. ',
+      solution: 'We custom designed the game from scratch and manufactured the box and obstacles. I was in charge of designing the point counting mechanism and displaying it for the player to see. With only an Arduino and limited budget to buy additional components, I had to decide on the best way to track when balls passed by specific places to count points. Initially I had tried to use pressure sensors, however the ball was unable to trigger it reliably. I then came up with a design that used an LED and a photoresistor, mounted on opposite walls of an opening. When a ball passed in front, the light would momentarily be blocked and the point count would increase. To display the points, we used a 7-segment display, however this required more pins to the Arduino than we had available. I used a shift register to increase the Arduino’s capabilities and properly display the score. To tie it all together, I designed and assembled a circuit board with all of the electronic components. I ran into a lot of trouble with faulty connections and did a lot of debugging and experimentation. This was the most fun project I have done for a course so far!'
     },
     {
       id: 'web-3',
@@ -107,16 +76,8 @@ export const projects = {
       image: '/sachihealth/IMG_7735.PNG',
       images: ['/sachihealth/IMG_7735.PNG', '/sachihealth/IMG_7737.PNG', '/sachihealth/IMG_7739.PNG', '/sachihealth/IMG_7740.PNG'],
       videos: ['/sachihealth/RPReplay_Final1762448307.mov', '/sachihealth/RPReplay_Final1767988976.mov'],
-      goal: 'Develop a comprehensive women\'s health mobile application that integrates with wearables and health data to provide personalized health insights and medication management.',
-      challenges: [
-        'Translating Figma designs into a fully functional React Native application',
-        'Implementing Apple HealthKit data pipelines for seamless health data integration',
-        'Developing medication scheduling with notifications and reminders',
-        'Building data storage solutions using both SQLite (local) and AWS RDS (cloud)',
-        'Creating data visualization for health metrics and wearables data',
-        'Collaborating effectively with a startup team of 5 in an agile environment'
-      ],
-      solution: 'Owned the development of key features including the medication scheduling page, app notifications and settings, and Apple HealthKit data pipelines. Implemented dual storage architecture using SQLite for local data persistence and AWS Relational Database for cloud synchronization. Built comprehensive data visualization components to display user health metrics and wearables data. Created feature and library documentation to facilitate successful collaboration with the startup team. Presented progress at weekly standups and contributed to the overall product strategy. Successfully deployed the MVP to Apple Testflight for beta testing.'
+      goal: 'As a full stack intern, at Sachi Health, a startup working to provide greater health data and support to women with PCOS, I was in charge of integrating Apple Health metrics, building scheduling features, and enabling a variety of notification functionality. ',
+      solution: '[Sorry! This part of my portfolio is in progress.]'
     },
     {
       id: 'web-4',
@@ -129,16 +90,8 @@ export const projects = {
       links: [
         { label: 'Website', url: 'https://columbiadivhacks.com' }
       ],
-      goal: 'Migrate and modernize the DivHacks hackathon website to improve usability, accessibility, and functionality for 300+ hackers and sponsors.',
-      challenges: [
-        'Migrating legacy HTML/CSS site to modern React architecture',
-        'Coordinating across multiple teams (web development, outreach, design)',
-        'Implementing branch-based workflows in GitHub for collaborative development',
-        'Configuring deployments with Vercel for seamless CI/CD',
-        'Building mobile-responsive layouts and live-updating features',
-        'Creating accessible features for diverse user needs'
-      ],
-      solution: 'Led a team of web developers by defining clear objectives, delegating tasks, and driving weekly check-ins to ensure timely delivery. Successfully migrated the legacy HTML/CSS site to React, improving code maintainability and performance. Implemented branch-based workflows in GitHub to enable parallel development and code review processes. Configured automated deployments with Vercel for continuous integration. Built intuitive features including mobile-responsive layouts, live-updating schedules, and a beginner resources page. Improved site usability and accessibility, resulting in a better experience for 300+ hackers and sponsors during the MLH 2026 season launch.'
+      goal: 'As Technical Development Lead, I led the creation of the DivHacks hackathon website and helped organize the event for 300+ hackers and sponsors.',
+      solution: '[Sorry! This part of my portfolio is in progress.] '
     },
     {
       id: 'web-1',
@@ -147,15 +100,8 @@ export const projects = {
       tech: [ 'Backend', 'Google Maps API', 'MySQL', 'Node.js', 'Express', 'Railway', 'Render', 'GitHub Pages'],
       category: 'webApp',
       image: '/cafelist/IMG_3CA4D8AFCBBC-1.jpeg',
-      goal: 'Create a social platform where coffee enthusiasts can discover, save, and share their favorite cafes with a community of like-minded users.',
-      challenges: [
-        'Designing a scalable MySQL database schema for users, cafes, and interactions',
-        'Implementing Google Maps API for location-based services and map visualization',
-        'Building a full-stack application with separate frontend and backend deployments',
-        'Creating a dynamic and shareable user experience with real-time interactions',
-        'Hosting frontend, backend, and database across multiple platforms (Railway, Render, GitHub Pages)'
-      ],
-      solution: 'Developed a full-stack web application with React frontend and Node.js/Express backend. Designed and implemented a comprehensive MySQL database schema to store user accounts, cafe information, likes, and user preferences. Integrated Google Maps API to display cafe locations, enable location-based searches, and provide interactive map features. Implemented user authentication and authorization for secure sign-in functionality. Deployed the frontend on GitHub Pages, backend on Railway, and database on Render, ensuring proper CORS configuration and API connectivity across platforms. Created an intuitive UI that allows users to discover cafes, like their favorites, and see what other users are enjoying.'
+      goal: 'Create a social platform where coffee enthusiasts can discover, save, and share their favorite cafes and interact with other users.',
+      solution: '[Sorry! This part of my portfolio is in progress.] '
     },
     {
       id: 'web-5',
@@ -167,13 +113,8 @@ export const projects = {
       links: [
         { label: 'Website', url: 'https://studioaprilshowers.com' }
       ],
-      goal: 'Create a professional website to showcase creative work and portfolio pieces.',
-      challenges: [
-        'Designing an intuitive and visually appealing user interface',
-        'Ensuring fast load times and optimal performance',
-        'Creating a responsive design that works across all devices'
-      ],
-      solution: 'Developed a clean and modern website to showcase creative work. Focused on user experience with intuitive navigation and fast loading times. Implemented responsive design principles to ensure optimal viewing across desktop, tablet, and mobile devices. The site is live at studioaprilshowers.com.'
+      goal: ' I create handmade jewelry and needed a place to showcase my work. The goal was to create a professional website to share my work and drive more online customers.',
+      solution: '[Sorry! This part of my portfolio is in progress.]'
     },
     // LookBook App - commented out for now, keeping code for later
     // {

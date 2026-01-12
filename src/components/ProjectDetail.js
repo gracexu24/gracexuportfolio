@@ -118,17 +118,7 @@ const ProjectDetail = ({ project, onBack }) => {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Challenges</Text>
-          {project.challenges.map((challenge, index) => (
-            <View key={index} style={styles.challengeItem}>
-              <Text style={styles.challengeBullet}>•</Text>
-              <Text style={styles.challengeText}>{challenge}</Text>
-            </View>
-          ))}
-        </View>
-
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Solution</Text>
+          <Text style={styles.sectionTitle}>Summary</Text>
           <Text style={styles.sectionText}>{project.solution}</Text>
         </View>
       </View>
@@ -224,23 +214,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#1976d2',
     fontWeight: '500',
-  },
-  challengeItem: {
-    flexDirection: 'row',
-    marginBottom: 12,
-    alignItems: 'flex-start',
-  },
-  challengeBullet: {
-    fontSize: 20,
-    color: '#4a90e2',
-    marginRight: 12,
-    marginTop: 2,
-  },
-  challengeText: {
-    fontSize: 16,
-    lineHeight: 28,
-    color: '#4a4a4a',
-    flex: 1,
   },
   linksContainer: {
     flexDirection: 'row',
