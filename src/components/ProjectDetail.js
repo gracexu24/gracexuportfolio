@@ -17,9 +17,13 @@ const ProjectDetail = ({ project, onBack }) => {
         {/* Display all videos */}
         {project.videos && project.videos.length > 0 && (
           <View style={styles.mediaSection}>
-            {project.videos.map((videoUrl, index) => (
-              <VideoEmbed key={index} videoUrl={videoUrl} style={styles.videoContainer} />
-            ))}
+            <View style={styles.videoGrid}>
+              {project.videos.map((videoUrl, index) => (
+                <View key={index} style={styles.videoGridItem}>
+                  <VideoEmbed videoUrl={videoUrl} style={styles.videoContainer} />
+                </View>
+              ))}
+            </View>
           </View>
         )}
         
@@ -130,7 +134,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f5f5f5',
-    fontFamily: "'Courier New', 'Courier', 'Monaco', 'Menlo', 'Consolas', 'Roboto Mono', monospace",
+    fontFamily: "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
   },
   content: {
     maxWidth: 900,
@@ -180,7 +184,19 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   videoContainer: {
-    marginBottom: 24,
+    width: '100%',
+    height: '100%',
+  },
+  videoGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    marginHorizontal: -8,
+  },
+  videoGridItem: {
+    width: '48%',
+    paddingHorizontal: 8,
+    marginBottom: 16,
   },
   mediaSection: {
     marginBottom: 32,

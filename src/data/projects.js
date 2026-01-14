@@ -23,7 +23,7 @@ export const projects = {
       description: 'Columbia Space Initiative SUITS Mission Lead, participating in NASA Spacesuit User Interface Technologies design challenge. Building an intuitive AR interface for astronaut spacesuits. ',
       tech: ['Unity','C#', 'Magic Leap 2', 'AR Development','GitHub', 'Python', 'UI/UX', 'Navigation', 'AI'],
       category: 'software',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=NASA+Spacesuit+UI',
+      image: '/magicleap.jpg',
       video: 'https://www.youtube.com/embed/IWt7Vkgpcjg',
       links: [
         { label: 'NASA SUITS Challenge', url: 'https://www.nasa.gov/learning-resources/spacesuit-user-interface-technologies-for-students/'}
@@ -47,9 +47,11 @@ export const projects = {
       id: 'robotics-1',
       title: 'Autonomous Driving Claw Robot',
       description: 'Designed, prototyped, and built a driving robotic claw that searched for, picked up and stored objects autonomously.',
-      tech: ['Python', 'Computer Vision', 'CAD', 'Raspberry Pi','PCB Design'],
+      tech: ['Python', 'Computer Vision', 'CAD', 'Raspberry Pi','Circuit Board Design'],
       category: 'robotics',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=Autonomous+Claw+Robot',
+      image: '/autonomousclaw.png',
+      imageRotation: 90,
+      imageSize: 'large',
       video: '/IMG_6401.mov',
       goal: 'Build a robotic vehicle that can navigate, find objects, and manipulate objects with a claw mechanism, and store them. Named “Phoney Bot”, I wanted this vehicle to find and pick up phones and prevent people from taking the phone out.',
       solution: 'I designed this project in CAD and built it with a Raspberry Pi and hardware components (motors, cameras, servos, lights, laser cut parts, etc). I used Python to take in camera input, detect objects, and control the vehicle to adjust and drive towards the object. I used servos to control the claws and phone carrying ramp. I used ultrasonic sensors for obstacle detection and to detect when the robot was being approached, which would cause a blaring alarm. This project was a great experience for me to get hands-on experience with the hardware, electronics, and software and combine a lot of different features and components. '
@@ -74,9 +76,10 @@ export const projects = {
       tech: ['React Native', 'Typescript', 'Expo', 'SQLite', 'AWS RDS', 'Apple HealthKit', 'Figma', 'Mobile Notifications'],
       category: 'webApp',
       image: '/sachihealth/IMG_7735.PNG',
+      imageCrop: 'top',
       images: ['/sachihealth/IMG_7735.PNG', '/sachihealth/IMG_7737.PNG', '/sachihealth/IMG_7739.PNG', '/sachihealth/IMG_7740.PNG'],
       videos: ['/sachihealth/RPReplay_Final1762448307.mov', '/sachihealth/RPReplay_Final1767988976.mov'],
-      goal: 'As a full stack intern, at Sachi Health, a startup working to provide greater health data and support to women with PCOS, I was in charge of integrating Apple Health metrics, building scheduling features, and enabling a variety of notification functionality. ',
+      goal: 'As a full stack intern at Sachi Health, a startup working to provide better health data and support to women with PCOS, I was in charge of integrating Apple Health metrics, building scheduling features, and enabling a variety of notification functionality. ',
       solution: '[Sorry! This part of my portfolio is in progress.]'
     },
     {
@@ -85,7 +88,7 @@ export const projects = {
       description: 'Columbia Women in Computer Science\'s Annual Hackathon Technical Development Lead. Launched DivHack\'s hackathon website for the 2026 MLH season.',
       tech: ['React', 'HTML', 'CSS', 'GitHub', 'Vercel'],
       category: 'webApp',
-      image: 'https://via.placeholder.com/600x400/0d2842/ffffff?text=DivHacks+Website',
+      image: '/divhacks/divhacksimage.png',
       video: '/divhacks/divhacks.mov',
       links: [
         { label: 'Website', url: 'https://columbiadivhacks.com' }

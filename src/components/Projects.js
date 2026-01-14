@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { projects } from '../data/projects';
 
 const Projects = ({ onProjectSelect }) => {
@@ -18,6 +18,41 @@ const Projects = ({ onProjectSelect }) => {
           {allProjects.map((project) => (
             <View key={project.id} style={[styles.projectCard, styles.projectCardSpacing]}>
               <Text style={styles.projectTitle}>{project.title}</Text>
+              {project.image && (
+                <View style={[
+                  styles.projectImageContainer,
+                  project.imageRotation && styles.rotatedImageContainer,
+                  project.image === '/autonomousclaw.png' && styles.noPaddingImageContainer
+                ]}>
+                  {typeof document !== 'undefined' ? (
+                    React.createElement('img', {
+                      src: project.image,
+                      alt: project.title,
+                      style: {
+                        width: project.imageRotation ? 'auto' : '100%',
+                        height: project.imageSize === 'large' && project.imageRotation ? '300px' : (project.imageRotation ? '200px' : '200px'),
+                        maxWidth: project.imageSize === 'large' && project.imageRotation ? '300px' : (project.imageRotation ? '200px' : '100%'),
+                        objectFit: project.imageRotation ? 'contain' : (project.imageCrop === 'top' ? 'cover' : 'cover'),
+                        objectPosition: project.imageCrop === 'top' ? '50% 25%' : 'center',
+                        transform: project.imageRotation ? `rotate(${project.imageRotation}deg)` : 'none',
+                        display: 'block',
+                      },
+                    })
+                  ) : (
+                    <Image 
+                      source={{ uri: project.image }} 
+                      style={[
+                        styles.projectImage,
+                        project.imageRotation && { 
+                          transform: [{ rotate: `${project.imageRotation}deg` }],
+                          height: 'auto',
+                        }
+                      ]}
+                      resizeMode={project.imageRotation ? 'contain' : (project.imageCrop === 'top' ? 'cover' : 'cover')}
+                    />
+                  )}
+                </View>
+              )}
               <Text style={styles.projectDescription}>{project.description}</Text>
               <View style={styles.techTags}>
                 {project.tech.map((tech, index) => (
@@ -45,7 +80,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     paddingVertical: 80,
     paddingHorizontal: 30,
-    fontFamily: "'Courier New', 'Courier', 'Monaco', 'Menlo', 'Consolas', 'Roboto Mono', monospace",
+    fontFamily: "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
   },
   content: {
     maxWidth: 1200,
@@ -73,6 +108,26 @@ const styles = StyleSheet.create({
     padding: 24,
     width: '100%',
     maxWidth: 350,
+  },
+  projectImageContainer: {
+    width: '100%',
+    marginTop: 12,
+    marginBottom: 16,
+    overflow: 'visible',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  rotatedImageContainer: {
+    minHeight: 200,
+  },
+  noPaddingImageContainer: {
+    marginTop: 0,
+    marginBottom: 0,
+  },
+  projectImage: {
+    width: '100%',
+    height: 200,
   },
   projectTitle: {
     fontSize: 24,

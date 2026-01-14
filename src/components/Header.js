@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#75B2DD',
     paddingTop: 20,
     paddingBottom: 80,
-    fontFamily: "'Courier New', 'Courier', 'Monaco', 'Menlo', 'Consolas', 'Roboto Mono', monospace",
+    fontFamily: "'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
   },
   nav: {
     flexDirection: 'row',
