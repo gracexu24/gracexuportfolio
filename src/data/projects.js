@@ -35,7 +35,7 @@ export const projects = {
       id: 'software-2',
       title: 'AWS Deepracer Project - DitecT Lab at Columbia University',
       description: 'Programed and tested control scripts for an AWS Deepracer autonomous driving project.',
-      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer', 'Mathplotlib'],
+      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer', 'Matplotlib'],
       category: 'software',
       image: '/autonomous driving/car.png',
       goal: 'Develop and test control scripts for a robotic car to analyze autonomous driving algorithms in a scaled-down model urban environment.',
