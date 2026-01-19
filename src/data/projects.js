@@ -35,7 +35,7 @@ export const projects = {
       id: 'software-2',
       title: 'AWS Deepracer Project - DitecT Lab at Columbia University',
       description: 'Programed and tested control scripts for an AWS Deepracer autonomous driving project.',
-      tech: ['Python', 'Raspberry Pi', 'AWS Deepracer', 'Matplotlib'],
+      tech: ['Python', 'IMU Sensor', 'Raspberry Pi', 'AWS Deepracer', 'Matplotlib'],
       category: 'software',
       image: '/autonomous driving/car.png',
       goal: 'Develop and test control scripts for a robotic car to analyze autonomous driving algorithms in a scaled-down model urban environment.',
@@ -78,9 +78,17 @@ export const projects = {
       image: '/sachihealth/IMG_7735.PNG',
       imageCrop: 'top',
       images: ['/sachihealth/IMG_7735.PNG', '/sachihealth/IMG_7737.PNG', '/sachihealth/IMG_7739.PNG', '/sachihealth/IMG_7740.PNG'],
-      videos: ['/sachihealth/RPReplay_Final1762448307.mov', '/sachihealth/RPReplay_Final1767988976.mov'],
+      videos: ['/sachihealth/RPReplay_Final1767988976.mov', '/sachihealth/RPReplay_Final1762448307.mov'],
       goal: 'As a full stack intern at Sachi Health, a startup working to provide better health data and support to women with PCOS, I was in charge of integrating Apple Health metrics, building scheduling features, and enabling a variety of notification functionality. ',
-      solution: '[Sorry! This part of my portfolio is in progress.]'
+      solution: `I got the amazing opportunity to work as a founding engineer in Sachi Health's startup team. I spent 6 months working on building the MVP app of Sachi Health's PCOS support app.
+
+I was first tasked with integrating Apple Health data into a react native app. I ran into issues incorporating iOS specific queries into the react native codebase, however after much research and trial, I found and implemented the best library that served as a bridge between the Apple Healthkit framework and our mobile app. I then worked to parse the data based on our app's specifications, user's data preferences, and the constraints of Apple Healthkit. I created the database schema and necessary functions to store this data both locally and then to the server through daily updates.
+
+I then worked on the medication scheduling and editing pages (as shown in the 1st video and 1st two images). I had to build the frontend based on Figma mockups and properly parse, format, and insert users properly into preexisting databases. A challenge I ran into was building an intuitive scheduling page that allowed for flexibility but also ease when handling prescription scheduling.
+
+For my last task, I got to completely design the UI, tech stack, and handle integration for the in-app notifications (2nd video and images). I used the expo-notifications API to configure the local notifications, programmed scheduling functions, and implemented the necessary controls and customizations. I proposed a local storage only database and notification structure to reduce the amount of server usage while maintaining all the required functionality such as customizable messages, default messages, scheduling notifications, privacy settings, persistent notification settings, and more. I also ensured that these notifications could be scaled and implemented for different use cases, and then integrated it with other parts of the app that required notifications (such as mediation creation). I iteratively tested with each Apple beta testflight, received feedback from users and peers, and rigorously tested edge cases.
+
+This was an amazing experience to work in a collaborative team where I got to collaborate, provide input, and set goals with the founders directly. It challenged me with working on large codebases, considering real-world constraints like time, server resources and scalability, and writing meaningful, effective code that was peer reviewed and tested. It also allowed me to gain hands-on experience with understanding the use cases and limitations of AI coding assistants in real production.`
     },
     {
       id: 'web-4',
