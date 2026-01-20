@@ -80,15 +80,12 @@ export const projects = {
       images: ['/sachihealth/IMG_7735.PNG', '/sachihealth/IMG_7737.PNG', '/sachihealth/IMG_7739.PNG', '/sachihealth/IMG_7740.PNG'],
       videos: ['/sachihealth/RPReplay_Final1767988976.mov', '/sachihealth/RPReplay_Final1762448307.mov'],
       goal: 'As a full stack intern at Sachi Health, a startup working to provide better health data and support to women with PCOS, I was in charge of integrating Apple Health metrics, building scheduling features, and enabling a variety of notification functionality. ',
-      solution: `I got the amazing opportunity to work as a founding engineer in Sachi Health's startup team. I spent 6 months working on building the MVP app of Sachi Health's PCOS support app.
-
-I was first tasked with integrating Apple Health data into a react native app. I ran into issues incorporating iOS specific queries into the react native codebase, however after much research and trial, I found and implemented the best library that served as a bridge between the Apple Healthkit framework and our mobile app. I then worked to parse the data based on our app's specifications, user's data preferences, and the constraints of Apple Healthkit. I created the database schema and necessary functions to store this data both locally and then to the server through daily updates.
-
-I then worked on the medication scheduling and editing pages (as shown in the 1st video and 1st two images). I had to build the frontend based on Figma mockups and properly parse, format, and insert users properly into preexisting databases. A challenge I ran into was building an intuitive scheduling page that allowed for flexibility but also ease when handling prescription scheduling.
-
-For my last task, I got to completely design the UI, tech stack, and handle integration for the in-app notifications (2nd video and images). I used the expo-notifications API to configure the local notifications, programmed scheduling functions, and implemented the necessary controls and customizations. I proposed a local storage only database and notification structure to reduce the amount of server usage while maintaining all the required functionality such as customizable messages, default messages, scheduling notifications, privacy settings, persistent notification settings, and more. I also ensured that these notifications could be scaled and implemented for different use cases, and then integrated it with other parts of the app that required notifications (such as mediation creation). I iteratively tested with each Apple beta testflight, received feedback from users and peers, and rigorously tested edge cases.
-
-This was an amazing experience to work in a collaborative team where I got to collaborate, provide input, and set goals with the founders directly. It challenged me with working on large codebases, considering real-world constraints like time, server resources and scalability, and writing meaningful, effective code that was peer reviewed and tested. It also allowed me to gain hands-on experience with understanding the use cases and limitations of AI coding assistants in real production.`
+      solution: `I got the amazing opportunity to work as a founding engineer on Sachi Health’s startup team, where I spent six months building the MVP of a PCOS support mobile app.
+My first major task was integrating Apple Health data into a React Native app. I ran into challenges incorporating iOS-specific queries into the React Native codebase, but after extensive research and experimentation, I identified and implemented a library that bridged the Apple HealthKit framework with our mobile app. I then parsed and structured the data according to our product requirements, user data preferences, and Apple HealthKit constraints. I designed the database schema and built the functions needed to store data locally and sync it to the server through daily updates.
+Next, I developed the medication scheduling and editing pages based on Figma mockups. This involved building the frontend, formatting and inserting user data into existing databases, and ensuring smooth interaction flows. One challenge I faced was designing an intuitive scheduling interface that balanced flexibility with simplicity for handling prescription routines.
+For my final project, I took ownership of designing the UI, tech stack, and integration for in-app notifications. I used the expo-notifications API to configure local notifications, implemented scheduling logic, and built customization controls. I proposed a local storage based notification system to minimize server usage while supporting features such as customizable messages, default templates, scheduling, privacy settings, and persistent preferences. I also designed the system to scale across future notification use cases and integrated it with other app features such as medication creation. Throughout development, I tested across Apple beta TestFlight releases, gathered feedback from users and teammates, and rigorously validated edge cases.
+Overall, this experience allowed me to work closely with the founders, contribute to product decisions, and set technical goals in a fast moving startup environment. It challenged me to navigate large codebases, consider real-world constraints like time, scalability, and server costs, and write production quality code that was peer-reviewed and tested. It also gave me hands-on experience understanding both the strengths and limitations of AI coding assistants in real development workflows.
+`
     },
     {
       id: 'web-4',
@@ -102,7 +99,13 @@ This was an amazing experience to work in a collaborative team where I got to co
         { label: 'Website', url: 'https://columbiadivhacks.com' }
       ],
       goal: 'As Technical Development Lead, I led the creation of the DivHacks hackathon website and helped organize the event for 300+ hackers and sponsors.',
-      solution: '[Sorry! This part of my portfolio is in progress.] '
+      solution: `I led the redevelopment of the DivHacks hackathon (diversity hackathon hosted by Columbia Women in CS) website, rebuilding a legacy HTML/CSS site into a modern, scalable React-based platform to support the MLH 2026 season. The original site had become difficult to maintain and slow to iterate on, so I designed and executed a full migration to a component-based architecture, improving code maintainability, performance, and team development speed.
+
+I established collaborative workflows by introducing branch-based development and structured code reviews in GitHub, enabling parallel feature development across multiple contributors. I also configured automated deployments with Vercel, allowing instant preview environments and reliable production releases.
+
+On the product side, I built mobile-responsive layouts, live-updating schedule and announcement components, and a beginner resources hub to improve accessibility for first-time hackers. I worked closely with design and outreach teams to align technical implementation with user experience goals, and led weekly sprint planning and check-ins to keep development on track for the team.
+
+The final platform launched successfully for the MLH 2026 season, serving 300+ hackers and sponsors with improved usability, accessibility, and real-time event updates. This project strengthened my experience in modern web architecture, cross-functional team leadership, and building reliable production systems for real users.`
     },
     {
       id: 'web-1',
@@ -112,7 +115,13 @@ This was an amazing experience to work in a collaborative team where I got to co
       category: 'webApp',
       image: '/cafelist/IMG_3CA4D8AFCBBC-1.jpeg',
       goal: 'Create a social platform where coffee enthusiasts can discover, save, and share their favorite cafes and interact with other users.',
-      solution: '[Sorry! This part of my portfolio is in progress.] '
+      solution: `I built this full-stack web application with a friend, with my focus primarily on backend system design and infrastructure. One of my primary challenges was designing and implementing a MySQL database schema to manage user accounts, cafe data, user interactions, and preferences. I structured relational tables to support efficient queries for likes and recommendations.
+
+I developed a Node.js and Express backend to serve RESTful APIs connecting the frontend to the database. This included implementing user sign in, building endpoints for searching cafes, storing user activity, and retrieving real-time interaction data. I also integrated the Google Maps API on the backend to support location-based recommendations.
+
+To deploy the system, I hosted the backend server on Railway, the MySQL database on Render, and the frontend on GitHub Pages. I configured CORS policies, environment variables, and API routing to ensure seamless communication across services hosted on different platforms.
+
+The final application delivers a dynamic user experience where users can discover cafes, save favorites, and view community activity.`
     },
     {
       id: 'web-5',
@@ -125,7 +134,7 @@ This was an amazing experience to work in a collaborative team where I got to co
         { label: 'Website', url: 'https://studioaprilshowers.com' }
       ],
       goal: ' I create handmade jewelry and needed a place to showcase my work. The goal was to create a professional website to share my work and drive more online customers.',
-      solution: '[Sorry! This part of my portfolio is in progress.]'
+      solution: 'Throughout high school I created and sold handmade jewelry on etsy, at in-person art markets, and at local handmade stores. I created this website to feature my work and experiences. This project was mainly front-end focused and showcases work that I am very proud of.'
     },
     // LookBook App - commented out for now, keeping code for later
     // {
